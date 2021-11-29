@@ -1,0 +1,2 @@
+class UserGenresController < ApplicationController
+end

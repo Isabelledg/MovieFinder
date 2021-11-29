@@ -10,10 +10,83 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_160503) do
+ActiveRecord::Schema.define(version: 2021_11_29_171505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "movie_genres", force: :cascade do |t|
+    t.bigint "movie_id", null: false
+    t.bigint "genre_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_movie_genres_on_genre_id"
+    t.index ["movie_id"], name: "index_movie_genres_on_movie_id"
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "rating"
+    t.integer "length"
+    t.string "director"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "streamers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_genres", force: :cascade do |t|
+    t.bigint "user_group_id", null: false
+    t.bigint "genre_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_user_genres_on_genre_id"
+    t.index ["user_group_id"], name: "index_user_genres_on_user_group_id"
+  end
+
+  create_table "user_groups", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "group_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_user_groups_on_group_id"
+    t.index ["user_id"], name: "index_user_groups_on_user_id"
+  end
+
+  create_table "user_movies", force: :cascade do |t|
+    t.bigint "user_group_id", null: false
+    t.bigint "movie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_user_movies_on_movie_id"
+    t.index ["user_group_id"], name: "index_user_movies_on_user_group_id"
+  end
+
+  create_table "user_streamers", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "streamer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["streamer_id"], name: "index_user_streamers_on_streamer_id"
+    t.index ["user_id"], name: "index_user_streamers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +100,14 @@ ActiveRecord::Schema.define(version: 2021_11_29_160503) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "movie_genres", "genres"
+  add_foreign_key "movie_genres", "movies"
+  add_foreign_key "user_genres", "genres"
+  add_foreign_key "user_genres", "user_groups"
+  add_foreign_key "user_groups", "groups"
+  add_foreign_key "user_groups", "users"
+  add_foreign_key "user_movies", "movies"
+  add_foreign_key "user_movies", "user_groups"
+  add_foreign_key "user_streamers", "streamers"
+  add_foreign_key "user_streamers", "users"
 end

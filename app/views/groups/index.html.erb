@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Groups!</h1>
+  <% if @groups.empty? %>
+    <p>No groups</p>
+  <% else %>
+    <% @groups.each do |group| %>
+      <%= link_to group_path(group), class: "group-link" do %>
+        <div class="card-group-infos">
+          <h2><%= group.name %></h2>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= link_to 'Back', pages_friends_path %>
+</div>

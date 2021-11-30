@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgba(0,0,0,1) 100%);
+
+}
+div.login {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 30px;
+  min-height: 95vh;
+}
+//.sign-up-container {
+ // background-image: url("../MovieFinderLogo.png");
+//}
+.login-header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0px 4px 6px black;
+}
+.form-inputs {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+}
+.form-control {
+  border-radius: 12px;
+  border: solid 3px #5E5E5E;
+}
+.form-actions {
+  background-color: none;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.btn.next {
+  width: 90px;
+  color: white;
+  margin:0;
+  padding: 3px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  border: solid 1px white;
+  border-radius: 9px;
+  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgba(0,0,0,1) 100%);
+  position: absolute;
+  right: -15px;
+  top: 100px;
+}
+.back {
+  width: 90px;
+  text-align: center;
+  color: white;
+  margin:0;
+  padding: 3px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  border: solid 1px white;
+  border-radius: 9px;
+  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgba(0,0,0,1) 100%);
+  position: absolute;
+  left: -10px;
+  top: 100px;
+}
+//.password, .email{
+//}
+label.optional:not(.form-check-label)  {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.form-check {
+  margin-top: 15px;
+}
+
+div.form-group {
+  margin: 0 auto;
+}

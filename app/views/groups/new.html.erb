@@ -1,7 +1,10 @@
 <div class="container">
   <div class="create-group-page">
-  <%= simple_form_for(@group) do |f| %>
+  <%= simple_form_for @group do |f| %>
+  <%= f.error_notification %>
     <%= f.input :name %>
+    <%= f.input :password, required: true %>
+    <%= f.input :password_confirmation, required: true %>
     <%= f.submit %>
   <% end %>
   </div>

@@ -4,24 +4,24 @@ body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 2px;
   background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgba(0,0,0,1) 100%);
-
+  height: 100vh;
 }
 div.login {
   width: 100%;
   margin: 0 auto;
-  padding: 80px 30px;
-  min-height: 95vh;
+  padding: 40px 30px;
+  min-height: 80vh;
   position: relative;
 }
 
 .sign-up-container {
-  margin: 80px 30px 30px;
+  margin: 20px 30px 30px;
   text-align: center;
 }
 i.fas {
   font-size: 90px;
-  color: #8E8E8E;
-  text-shadow:  2px 2px 2px black;
+  color: #5E5E5E;
+  text-shadow:  2px 3px 3px black;
   margin: 0 auto;
 }
 .login-header {
@@ -39,16 +39,19 @@ i.fas {
   text-shadow: 2px 2px 2px black;
 }
 .form-control {
-  border-radius: 12px;
+  border-radius: 10px;
   border: solid 3px #5E5E5E;
+  height: 30px;
 }
 .form-actions {
   background-color: none;
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 20px;
   position: relative;
+
 }
-.btn.next {
+.btn.continue {
   width: 90px;
   color: white;
   margin:0;
@@ -56,7 +59,7 @@ i.fas {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
-  border: solid 2px #5E5E5E;
+  border: solid 2px #EEEEEE;
   border-radius: 9px;
   background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgba(0,0,0,1) 100%);
   position: absolute;
@@ -64,7 +67,7 @@ i.fas {
   top: 100px;
   opacity: 0.7;
 }
-.btn.next:hover {
+.btn.continue:hover {
   opacity: 1;
   border: solid 2px white;
 }
@@ -77,7 +80,7 @@ i.fas {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
-  border: solid 2px #5E5E5E;
+  border: solid 2px #EEEEEE;
   border-radius: 9px;
   background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgba(0,0,0,1) 100%);
   position: absolute;

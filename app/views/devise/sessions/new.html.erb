@@ -1,6 +1,6 @@
 <div class="login" >
-  <div class="sign-up-conatiner">
-    <%= image_tag("MovieFinderLogo.png", :alt => "MovieFinder Logo") %>
+  <div class="sign-up-container">
+    <i class="fas fa-film"></i>
     <h2 class="login-header">LOG IN</h2>
   </div>
 
@@ -19,11 +19,9 @@
 
   <!-- <%= render "devise/shared/links" %> -->
 
-
-
     <div class="form-actions">
       <%= link_to "Back", :back, class: "back" %>
-      <%= f.button :submit, "Next", class: "next" %>
+      <%= f.button :submit, "Continue", class: "continue" %>
     </div>
   <% end %>
 </end>

@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="create-group-page">
+  <%= simple_form_for(@group) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit %>
+  <% end %>
+  </div>
+  <%= link_to 'Back', pages_friends_path %>
+</div>

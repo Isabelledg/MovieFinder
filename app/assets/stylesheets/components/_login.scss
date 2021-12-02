@@ -117,3 +117,7 @@ label.optional:not(.form-check-label)  {
 div.form-group {
   margin: 0 auto;
 }
+// dropdown menu does not display in login_view
+.navbar-toggler {
+  display: none;
+}

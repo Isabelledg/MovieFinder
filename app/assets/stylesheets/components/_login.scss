@@ -14,14 +14,14 @@ div.login {
   position: relative;
 }
 
-.sign-up-container {
+.login-container {
   margin: 20px 30px 30px;
   text-align: center;
 }
 i.fas {
   font-size: 90px;
   color: #5E5E5E;
-  text-shadow:  2px 3px 3px black;
+  text-shadow: 2px 3px 3px black;
   margin: 0 auto;
 }
 .login-header {
@@ -51,6 +51,11 @@ i.fas {
   position: relative;
 
 }
+.form-check-label {
+  color: #5E5E5E;
+  text-shadow: 0 2px 2px black;
+  font-weight: 600;
+}
 .btn.continue {
   width: 90px;
   color: white;
@@ -61,10 +66,10 @@ i.fas {
   text-shadow: 2px 2px 2px black;
   border: solid 2px #EEEEEE;
   border-radius: 9px;
-  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
   position: absolute;
   right: -15px;
-  top: 100px;
+  top: 80px;
   opacity: 0.7;
 }
 .btn.continue:hover {
@@ -84,8 +89,8 @@ i.fas {
   border-radius: 9px;
   background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgba(0,0,0,1) 100%);
   position: absolute;
-  left: -10px;
-  top: 100px;
+  left: -15px;
+  top: 80px;
   opacity: 0.7;
 }
 a.back:hover {

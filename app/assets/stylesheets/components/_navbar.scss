@@ -19,6 +19,7 @@
 }
 #logo .fas.logo {
   font-size: 30px;
+
 }
 #logo p {
   font-family: 'Roboto', sans-serif;
@@ -35,4 +36,32 @@
   right: 13px;
   top: 17px;
   font-size: 27px;
+}
+.fas.fa-bars.menu:active {
+  color: white;
+}
+
+span.navbar-toggler-icon {
+  position: fixed;
+  right: 13px;
+  font-size: 25px;
+  top: 14px;
+
+}
+/* .mr-auto {
+  width: 30%;
+  background-color: #8E8E8E;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: solid 2px #5E5E5E;
+  border-radius: 8px;
+
+  text-shadow: 1px 2px 2px black;
+  text-align: center;
+}
+*/
+.my-nav-link {
+  color: white !important;
+  padding: 0;
 }

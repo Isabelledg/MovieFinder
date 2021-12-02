@@ -1,7 +1,10 @@
-<% if @groups.empty? %>
-  <button type="button" class="btn btn-lg btn-primary" disabled>Join group</button>
-<% else %>
-  <%= link_to "Join group", groups_path, class: "btn btn-lg btn-primary" %>
-<% end %>
+<div class="create-join-group">
+    <i class="fas fa-film"></i>
+  <% if @groups.empty? %>
+    <button type="button" class="btn btn-lg btn-primary" disabled>Join group</button>
+  <% else %>
+    <%= link_to "Join group", groups_path, class: " join-group" %>
+  <% end %>
 
-<%= link_to "Create group", new_group_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Create group", new_group_path, class: "create-group" %>
+</div>

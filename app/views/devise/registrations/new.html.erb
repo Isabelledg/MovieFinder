@@ -1,5 +1,8 @@
 <div class="sign_up">
-  <h2>Sign up</h2>
+  <div class="sign-up-container">
+    <i class="fas fa-film"></i>
+    <h2 class="sign-up-header">SIGN UP</h2>
+  </div>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -20,9 +23,9 @@
   </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class: "sign-up" %>
     </div>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+  <!-- <%= render "devise/shared/links" %> -->
 </end>

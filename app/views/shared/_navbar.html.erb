@@ -5,14 +5,14 @@
   <div id="logo">
     <i class="fas fa-film logo" style="position: fixed; left: 13px;"></i>
     <p>MOVIE FINDER</p>
-    <i class="fas fa-bars menu"></i>
+    <!--  <i class="fas fa-bars menu"></i> -->
   </div>
 
 
- <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" ></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
--->
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
@@ -31,10 +31,13 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+  
+       <li class="nav-item my-nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link my-nav-link" %>
         </li>
+
       <% end %>
+
     </ul>
   </div>
 </div>

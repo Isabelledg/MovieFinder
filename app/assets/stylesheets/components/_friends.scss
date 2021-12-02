@@ -1,8 +1,7 @@
-// Specific CSS for your home-page
-.get-started-container {
-  width: 100%;
-  position: relative;
-  text-align: center;
+.create-join-group {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
 }
 i.fas {
   font-size: 90px;
@@ -10,7 +9,24 @@ i.fas {
   text-shadow: 2px 3px 3px black;
   margin: 0 auto;
 }
-
+.create-group {
+  width: 170px;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  border: solid 2px #EEEEEE;
+  border-radius: 7px;
+  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
+  margin: 10px auto;
+}
+.create-group:hover {
+  opacity: 1;
+  border: solid 2px white;
+}
 .join-group {
   width: 170px;
   text-align: center;

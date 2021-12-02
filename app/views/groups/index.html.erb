@@ -4,7 +4,7 @@
     <p>No groups</p>
   <% else %>
     <% @groups.each do |group| %>
-      <%= link_to group_path(group), class: "group-link" do %>
+      <%= link_to  new_group_user_group_path(group), class: "group-link" do %>
         <div class="card-group-infos">
           <h2><%= group.name %></h2>
         </div>

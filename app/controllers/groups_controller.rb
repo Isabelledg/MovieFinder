@@ -19,23 +19,19 @@ class GroupsController < ApplicationController
     @group = Group.delete(params[:id])
   end
 
-  def join
-    @group = Group.find(params[:id])
-    @group.users << current_user
-    if @group.save!
-      redirect_to @group
-    else
-      redirect_to @group
-    end
-  end
-
   def create
-    @group = Group.new(params[:name])
-    @group.users << current_user
-    if @group.save!
+    @group = Group.new(group_params)
+    UserGroup.create(user: current_user, group: @group)
+    if @group.save
       redirect_to @group
     else
       render :new
     end
+  end
+
+  private
+
+  def group_params
+    params.require(:group).permit(:name, :password, :password_confirmation)
   end
 end

@@ -1,4 +1,8 @@
 <div class="container">
+  <div class="fas-logo">
+    <i class="fas fa-film"></i>
+  </div>
+
   <div class="create-group-page">
   <%= simple_form_for @group do |f| %>
   <%= f.error_notification %>
@@ -8,5 +12,5 @@
     <%= f.submit %>
   <% end %>
   </div>
-  <%= link_to 'Back', pages_friends_path %>
+  <%= link_to 'Back', pages_friends_path, class: "previous"  %>
 </div>

@@ -1,16 +1,26 @@
 <div class="container">
-  <h1>Groups!</h1>
+
+  <div class="groups-container">
+    <i class="fas fa-film"></i>
+    <h2 class="sign-up-header">GROUPS</h2>
+  </div>
+
+  <p>Search for groups</p>
+
+
   <% if @groups.empty? %>
-    <p>No groups</p>
+    <p class="">No groups</p>
   <% else %>
     <% @groups.each do |group| %>
       <%= link_to  new_group_user_group_path(group), class: "group-link" do %>
         <div class="card-group-infos">
-          <h2><%= group.name %></h2>
+          <p class="button"><%= group.name %></p>
         </div>
       <% end %>
     <% end %>
   <% end %>
 
-  <%= link_to 'Back', pages_friends_path %>
+  <div class="previous">
+    <%= link_to 'Back', pages_friends_path %>
+  </div>
 </div>

@@ -22,7 +22,6 @@ i.fas {
   font-weight: bold;
   text-shadow: 2px 4px 6px black;
 }
-
 .btn.sign-up {
   width: 90px;
   color: white;
@@ -42,4 +41,46 @@ i.fas {
 input.btn.sign-up:hover {
   opacity: 1;
   border: solid 2px white;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 30px;
+  min-height: 80vh;
+  position: relative;
+
+}
+.fas-logo {
+  margin: 20px 30px 30px;
+  text-align: center;
+}
+.create-group-pag {
+  width: 90%;
+  font-weight: bold;
+  text-shadow: black 2px 2px 2px;
+  margin: 0px auto;
+}
+
+.previous  {
+  width: 90px;
+  color: white;
+  text-align: center;
+  margin:0;
+  padding: 3px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  border: solid 2px #EEEEEE;
+  border-radius: 9px;
+  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
+  position: absolute;
+  left: 15px;
+  top: 540px;
+  opacity: 0.7;
+}
+a.previous:hover {
+  opacity: 1;
+  border: solid 2px white;
+  text-decoration: none;
 }

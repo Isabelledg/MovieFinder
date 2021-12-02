@@ -22,10 +22,13 @@ i.fas {
   border-radius: 7px;
   background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
   margin: 10px auto;
+  opacity: 0.7;
 }
 .create-group:hover {
   opacity: 1;
+  color: white;
   border: solid 2px white;
+  text-decoration: none;
 }
 .join-group {
   width: 170px;
@@ -40,8 +43,11 @@ i.fas {
   border-radius: 7px;
   background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
   margin: 10px auto;
+  opacity: 0.7;
 }
 .join-group:hover {
   opacity: 1;
+  color: white;
   border: solid 2px white;
+  text-decoration: none;
 }

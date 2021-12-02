@@ -6,6 +6,7 @@
 @import "sign_up";
 @import "friends";
 
+// style for views/groups/new.html.erb
 .groups-container {
   margin: 20px 30px 30px;
   text-align: center;
@@ -23,9 +24,12 @@ h2 {
   margin: 0 auto;
   padding: 40px 30px;
   min-height: 80vh;
-  text-align: center;
+
 }
-.button {
+.fas-logo {
+
+}
+.button-one {
   font-size: 16px;
   width: 170px;
   text-align: center;
@@ -42,13 +46,35 @@ h2 {
   opacity: 0.7;
   text-decoration: none;
 }
-p.button:hover {
+p.button-one:hover {
   text-decoration: none;
   opacity: 1;
 }
 p {
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
+  text-align: center;
+}
+.create-group-page {
+  text-shadow: 2px 2px 2px black;
+}
+
+[type="submit"]  {
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  border: solid 2px #EEEEEE;
+  border-radius: 7px;
+  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
+  margin: 10px auto;
+  opacity: 0.7;
+  text-decoration: none;
 }
 .previous a {
   color: white;

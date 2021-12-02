@@ -1,0 +1,6 @@
+<p>test</p>
+<ul>
+  <% @genres.each do |genre|  %>
+    <li><%= link_to genre.name, group_user_genre_user_movies_path(@group, genre) %></li>
+  <% end %>
+</ul>

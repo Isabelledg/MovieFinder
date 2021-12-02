@@ -5,7 +5,7 @@ class UserGroupsController < ApplicationController
     @user_group.user = current_user
     @user_group.group = @group
     if @user_group.save
-      redirect_to new_group_user_genre_path(@group)
+      redirect_to group_user_genres_path(@group)
     else
       render :new
     end
@@ -15,7 +15,7 @@ class UserGroupsController < ApplicationController
     @group = Group.find(params[:group_id])
     @user_group = UserGroup.new
     if @group.users.include?(current_user)
-      redirect_to new_group_user_genre_path(@group)
+      redirect_to group_user_genres_path(@group)
     else
       render :new
     end

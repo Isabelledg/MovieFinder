@@ -21,7 +21,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    UserGroup.create(user: current_user, group: @group)
+    UserGroup.create!(user: current_user, group: @group, password: group_params[:password])
     if @group.save
       redirect_to @group
     else

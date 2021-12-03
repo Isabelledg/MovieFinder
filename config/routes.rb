@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   get "/pages/friends", to: "pages#friends"
 
   resources :groups, only: [:new, :index, :show, :create] do
-    member do
-      post :join #/groups/:id/join
-    end
+
     resources :user_genres, only: [:index] do
       resources :user_movies, only: [:index]
     end

@@ -1,5 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
+  position: relative;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -10,15 +11,18 @@
 //}
 
 #logo {
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  left: 55px;
+  top: 17px;
 }
+
+// style for left-side logo
 #logo .fas.logo {
   font-size: 30px;
-
+  position: fixed;
+  left: 13px;
 }
 #logo p {
   font-family: 'Roboto', sans-serif;
@@ -27,9 +31,60 @@
   color: black;
   font-weight: 900;
   text-shadow:  0px 2px 2px grey;
-  position: fixed;
-  left: 55px;
 }
+
+// style for avatar
+.avatar-dropdown {
+  width: 40px;
+  height: auto;
+  position: fixed;
+  top: 20px;
+  right: 13px;
+}
+
+// style for dropdown-menu
+#navbarSupportedContent {
+  margin-top: 55px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #8E8E8E;
+}
+@media only screen and (max-width: 300px) {
+  .avatar-dropdown {
+    visibility: visible;
+  }
+  .navbar-toggler, .navbar-toggler {
+    visibility: visible;
+  }
+  .dropdown {
+    background-color: none;
+  }
+}
+
+.navbar-expand-sm .navbar-nav .dropdown-menu {
+  background-color: #8E8E8E;
+  border-radius: 9px;
+  box-shadow: 2px 2px 2px black;
+  min-width: 150px;
+  text-align: center;
+}
+
+.navbar-nav .dropdown-menu {
+    /* position: static; */
+    float: none;
+}
+#navbarSupportedContent .dropdown-item {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color:#EEEEEE;
+  padding: 2px 10px;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+}
+#navbarSupportedContent .dropdown-item:hover {
+  background-color: #5E5E5E;
+  font-size: 15px;
+}
+/*
 .fas.menu {
   position: fixed;
   right: 13px;
@@ -39,14 +94,9 @@
 .fas.fa-bars.menu:active {
   color: white;
 }
+*/
 
-span.navbar-toggler-icon {
-  position: fixed;
-  right: 13px;
-  font-size: 25px;
-  top: 14px;
 
-}
 /* .mr-auto {
   width: 30%;
   background-color: #8E8E8E;
@@ -59,15 +109,3 @@ span.navbar-toggler-icon {
   text-shadow: 1px 2px 2px black;
   text-align: center;
 }   */
-
-.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link {
-  color: #8E8E8E;
-  font-size: 16px;
-  font-weight: bold;
-
-}
-
-.my-nav-link {
-  color: white !important;
-  padding: 0;
-}

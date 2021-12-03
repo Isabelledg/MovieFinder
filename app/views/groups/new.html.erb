@@ -5,13 +5,13 @@
   </div>
 
   <div class="create-group-page">
-  <%= simple_form_for @group do |f| %>
-  <%= f.error_notification %>
-    <%= f.input :name %>
-    <%= f.input :password, required: true %>
-    <%= f.input :password_confirmation, required: true %>
-    <%= f.submit %>
-  <% end %>
+    <%= simple_form_for @group do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :name %>
+      <%= f.input :password, required: true %>
+      <%= f.input :password_confirmation, required: true %>
+      <%= f.submit %>
+    <% end %>
   </div>
   <%= link_to 'Back', pages_friends_path, class: "previous"  %>
 </div>

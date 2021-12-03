@@ -5,5 +5,5 @@ class Group < ApplicationRecord
   attribute :password_confirmation, type: String
 
   validates :password, confirmation: true, presence: true
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 15 }
 end

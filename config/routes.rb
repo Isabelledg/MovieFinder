@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "/pages/friends", to: "pages#friends"
 
-  resources :groups, only: [:new, :index, :show, :create] do
 
+  resources :groups, only: %i[new index show create] do  
     resources :user_genres, only: [:index] do
-      resources :user_movies, only: [:index]
+      resources :genre_movies, only: [:index]
     end
-    resources :user_groups, only: [:new, :create]
+    resources :user_groups, only: %i[new create show] do
+      resources :user_movies, only: %i[create show]
+    end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

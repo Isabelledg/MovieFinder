@@ -21,6 +21,10 @@ class UserGroupsController < ApplicationController
     end
   end
 
+  def show
+    @user_movie = UserMovie.find(params[:user_movie])
+  end
+
   private
 
   def user_group_params

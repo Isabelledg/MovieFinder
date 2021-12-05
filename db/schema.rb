@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_12_01_142722) do
   end
 
   create_table "groups", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password", null: false

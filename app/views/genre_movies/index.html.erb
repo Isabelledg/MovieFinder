@@ -1,0 +1,5 @@
+<ul>
+  <% @movies.each do |movie| %>
+    <li class="button-one"><%= link_to movie.title, group_user_group_user_movies_path(@group, @user_group, movie.id), method: "POST" %></li>
+  <% end %>
+</ul>

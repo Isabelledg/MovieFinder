@@ -5,6 +5,7 @@
 @import "login";
 @import "sign_up";
 @import "friends";
+@import 'group-show';
 
 // style for views/groups/new.html.erb
 .groups-container {
@@ -16,7 +17,7 @@ h2 {
   font-size: 24px;
   text-align: center;
   font-weight: bold;
-  text-shadow: 2px 4px 6px black;
+  text-shadow: 1px 1px 1px black;
  // letter-spacing: 10px;
 }
 .container {
@@ -38,7 +39,7 @@ h2 {
   padding: 10px 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 1px black;
   border: solid 2px #EEEEEE;
   border-radius: 7px;
   background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
@@ -52,11 +53,11 @@ p.button-one:hover {
 }
 p {
   font-weight: bold;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 1px black;
   text-align: center;
 }
 .create-group-page {
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 1px black;
 }
 
 [type="submit"]  {
@@ -68,7 +69,7 @@ p {
   padding: 10px 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 1px black;
   border: solid 2px #EEEEEE;
   border-radius: 7px;
   background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);

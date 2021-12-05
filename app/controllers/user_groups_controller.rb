@@ -15,10 +15,15 @@ class UserGroupsController < ApplicationController
     @group = Group.find(params[:group_id])
     @user_group = UserGroup.new
     if @group.users.include?(current_user)
-      redirect_to group_user_genres_path(@group)
+      #redirect_to group_user_genres_path(@group)
+      redirect_to @group
     else
       render :new
     end
+  end
+
+  def show
+    @user_movie = UserMovie.find(params[:user_movie])
   end
 
   private

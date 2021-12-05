@@ -5,14 +5,25 @@
     <h2 class="sign-up-header">GROUPS</h2>
   </div>
 
-  <p>Search for groups</p>
+  <!--<p>Search for groups</p>-->
+  <div data-controller="search-movies">
+    <%= form_with url: groups_path, method: :get, html: { class:
+      'mb-4', data: { search_movies_target: 'form' } } do |f| %>
+      <%= f.text_field :query,
+                      class: "form-control",
+                      placeholder: 'Search your Group',
+                      value: params[:query],
+                      data: { search_movies_target: 'input' } %>
+                      <% end %>
+  </div>
 
 
   <% if @groups.empty? %>
     <p class="">No groups</p>
   <% else %>
     <% @groups.each do |group| %>
-      <%= link_to  new_group_user_group_path(group), class: "group-link" do %>
+      <%#= link_to  new_group_user_group_path(group), class: "group-link" do %>
+      <%= link_to group_path(group), class: "group-link" do %>
         <div class="card-group-infos">
           <p class="button-one"><%= group.name %></p>
         </div>

@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @user_group = UserGroup.find_by(group: @group)
   end
 
   def index

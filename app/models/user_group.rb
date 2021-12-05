@@ -2,6 +2,7 @@ class UserGroup < ApplicationRecord
   belongs_to :user
   belongs_to :group
 
+  has_many :user_movies
   has_many :movies, through: :user_movies
 
   validates :user, :group, presence: true

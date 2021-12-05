@@ -1,31 +1,75 @@
 // Specific CSS for your home-page
-.get-started-container {
+// HTML file -> pages/home.html.erb
+
+// General Styling
+.first-container {
   width: 100%;
-  position: relative;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  margin: 0 auto;
+  margin-top: 60px;
 }
+
 i.fas {
   font-size: 90px;
   color: #5E5E5E;
-  text-shadow: 1px 1px 1px black;
-  margin: 0 auto;
+  text-shadow: -2px 2px 5px #EEEEEE;
 }
 
-.join-group {
-  width: 170px;
+h2 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 0.9cm;
+  // text-shadow: 0 0 2px white;
+}
+
+// Specific Styling
+#welcome {
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding-top: 10px;
+}
+
+#movie_finder {
+  font-size: 30px;
+  color: black;
+  text-shadow:
+    -3px -3px 4px white,
+    -2px -1px 4px white;
+}
+
+// Button Styling
+.button {
+  font-size: 16px;
   text-align: center;
   margin: 0 auto;
   color: white;
-  padding: 10px 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-shadow: 1px 1px 1px black;
-  border: solid 2px #EEEEEE;
+  text-shadow: 2px 2px 1px black;
   border-radius: 7px;
-  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
-  margin: 10px auto;
-}
-.join-group:hover {
+  background: linear-gradient(to right, #bbd2c5, #536976, #292e49);
   opacity: 1;
-  border: solid 2px white;
+}
+#get_started {
+  width: 170px;
+  padding: 7px 20px;
+  margin: 10px auto;
+  margin-top: 20px;
+  box-shadow:
+    -7px -5px 6px #EEEEEE,
+    7px 5px 6px #EEEEEE;
+}
+.button:hover, .button:active {
+  text-decoration: none;
+  color: white;
+}
+#get_started:hover, #get_started:active {
+  font-size: 18px;
+  width: 180px;
+  box-shadow:
+    -11px -8px 6px #EEEEEE,
+    11px 8px 6px #EEEEEE;
 }

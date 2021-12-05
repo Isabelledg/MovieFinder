@@ -4,7 +4,6 @@
 div.sign_up {
   width: 100%;
   margin: 0 auto;
-  min-height: 80vh;
   position: relative;
 }
 .first-container {
@@ -22,12 +21,12 @@ i.fas {
 }
 
 h2#sign_up {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
   font-size: 20px;
   letter-spacing: 3px;
   line-height: 0.9cm;
-  /* text-shadow:
-    -1px 1px 4px #bbd2c5,
-    1px -1px 4px #bbd2c5 */
 }
 
 // Button Styling - General
@@ -71,6 +70,7 @@ h2#sign_up {
     1px 1px 9px #EEEEEE;
 }
 
+//--------------------------------
 
 form#new_user {
   width: 80%;
@@ -101,16 +101,17 @@ form#new_user {
 }
 label.required {
   margin: 0px;
-  padding: 5px 0;
+  padding: 3px 0;
 }
-
+.form-group {
+  margin: 0;
+}
 
 /*------------------------------------------------*/
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 40px 30px;
-  min-height: 80vh;
   position: relative;
 
 }

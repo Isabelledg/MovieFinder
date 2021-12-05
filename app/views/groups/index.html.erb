@@ -2,11 +2,11 @@
 <!-- CSS file -> components/_index.css -->
 
 
-<div class="container">
+<div class="groups">
 
-  <div class="groups-container">
+   <div class="first-container">
     <i class="fas fa-film"></i>
-    <h2 class="sign-up-header">GROUPS</h2>
+    <h2 id="grp">GROUPS</h2>
   </div>
 
   <!--<p>Search for groups</p>-->
@@ -15,7 +15,7 @@
       'mb-4', data: { search_movies_target: 'form' } } do |f| %>
       <%= f.text_field :query,
                       class: "form-control",
-                      placeholder: 'Search your Group',
+                      placeholder: 'Search group',
                       value: params[:query],
                       data: { search_movies_target: 'input' } %>
                       <% end %>
@@ -29,13 +29,13 @@
       <%#= link_to  new_group_user_group_path(group), class: "group-link" do %>
       <%= link_to group_path(group), class: "group-link" do %>
         <div class="card-group-infos">
-          <p class="button-one"><%= group.name %></p>
+          <p class="button" id="group-name"><%= group.name %></p>
         </div>
       <% end %>
     <% end %>
   <% end %>
 
   <div class="previous">
-    <%= link_to 'Back', pages_friends_path %>
+    <%= link_to 'Back', pages_friends_path, class: "button", id: "back" %>
   </div>
 </div>

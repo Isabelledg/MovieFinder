@@ -1,55 +1,63 @@
 // HTML file -> pages/friends.html.erb
 
-.create-join-group {
-  margin-top: 100px;
+div.create-join-group {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.first-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  margin: 80px auto;
 }
 i.fas {
   font-size: 90px;
   color: #5E5E5E;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: -2px 3px px #EEEEEE;
   margin: 0 auto;
 }
-.create-group {
-  width: 170px;
-  text-align: center;
-  margin: 0 auto;
-  color: white;
-  padding: 10px 20px;
+h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-shadow: 1px 1px 1px black;
-  border: solid 2px #EEEEEE;
-  border-radius: 7px;
-  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
-  margin: 10px auto;
-  opacity: 0.7;
-}
-.create-group:hover {
-  opacity: 1;
-  color: white;
-  border: solid 2px white;
-  text-decoration: none;
-}
-.join-group {
-  width: 170px;
-  text-align: center;
   margin: 0 auto;
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 0.9cm;
+}
+
+// Buttons Styling
+.button {
+  font-size: 16px;
+  text-align: center;
   color: white;
-  padding: 10px 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-shadow: 1px 1px 1px black;
-  border: solid 2px #EEEEEE;
+  text-shadow: 2px 2px 1px black;
   border-radius: 7px;
-  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
-  margin: 10px auto;
-  opacity: 0.7;
-}
-.join-group:hover {
+  background: linear-gradient(to right, #bbd2c5, #536976, #292e49);
   opacity: 1;
-  color: white;
-  border: solid 2px white;
+}
+
+#join-group, #create-group {
+  display: block;
+  width: 150px;
+  padding: 3px 5px;
+  margin: 10px auto 25px;
+  box-shadow:
+    -1px -1px 5px #EEEEEE,
+    -1px 1px 5px #EEEEEE,
+    1px -1px 5px #EEEEEE,
+    1px 1px 5px #EEEEEE;
+}
+
+#join-group:hover, #create-group:hover, #join-group:active, #create-group:active {
   text-decoration: none;
+  color: white;
+  box-shadow:
+    -1px -1px 9px #EEEEEE,
+    -1px 1px 9px #EEEEEE,
+    1px -1px 9px #EEEEEE,
+    1px 1px 9px #EEEEEE;
 }

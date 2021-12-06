@@ -1,5 +1,11 @@
 <ul>
   <% @movies.each do |movie| %>
-    <li class="button-one"><%= link_to movie.title, group_user_group_user_movies_path(@group, @user_group, movie.id), method: "POST" %></li>
-  <% end %>
+    <li class="button-movie">
+    <%= check_box_tag(:movie) %>
+    <%= link_to movie.title, group_user_group_user_movies_path(@group, @user_group, movie.id), method: "POST" %></li>
+     <% end %>
 </ul>
+
+<%= simple_form_for group_user_group_user_movies_path(group_id, user_group_id) do |f| %>
+  <%= f.submit "Select movies" %>
+<% end %>

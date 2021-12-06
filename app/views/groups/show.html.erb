@@ -20,24 +20,23 @@
       <h2>You belong to this group</h2  >
     <% else %>
       <%= simple_form_for [@group, UserGroup.new] do |f| %>
-          <%= f.error_notification %>
-            <%= f.input :password, required: true %>
-            <%= f.submit 'Join' %>
-
-        <% end %>
+        <%= f.error_notification %>
+        <%= f.input :password, required: true %>
+        <%= f.submit 'Join' %>
+      <% end %>
     <% end %>
-     <div>
-    <%= link_to 'Select the amazing movie for this movie night- Vote Now', group_movies_path(@group),  class: "button" %>
+    <div>
+      <% if @empty_movies %>
+        <%= link_to 'Select the amazing movie for this movie night- Vote Now', group_movies_path(@group),  class: "button" %>
+      <% else %>
+        <% @user_group.movies.each do |movie| %>
+          <p><%= movie.title %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <br>
   </div>
-  <br>
-
-  </div>
-
-
-
-
   <div>
     <%= link_to 'Back', groups_path, class: "button", id: "back"%>
   </div>
-
 </div>

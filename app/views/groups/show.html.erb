@@ -10,17 +10,23 @@
     <p>CREATED BY:  </p>
     <p class="group-creator"><%= @user_group.user.name %></p>
     <p style="margin-bottom: 5px;">GROUP MEMBERS:  </p>
+
     <ul>
       <% @group.users.each do |user| %>
       <li><%= user.name %></li>
       <% end %>
     </ul>
-    <%= simple_form_for [@group, UserGroup.new] do |f| %>
+    <% if current_user.groups.include?(@group) %>
+      <h2>You belong to this group</h2  >
+    <% else %>
+     <%= simple_form_for [@group, UserGroup.new] do |f| %>
       <%= f.error_notification %>
         <%= f.input :password, required: true %>
         <%= f.submit 'Join' %>
+
     <% end %>
   </div>
+
 
   <div>
     <%= link_to 'Back', groups_path, class: "button", id: "back"%>

@@ -11,6 +11,7 @@
     <%= simple_form_for @group do |f| %>
       <%= f.error_notification %>
       <%= f.input :name %>
+      <%= f.input :genre_id, collection: @genres %>
       <%= f.input :password, required: true %>
       <%= f.input :password_confirmation, required: true %>
       <%= f.submit %>

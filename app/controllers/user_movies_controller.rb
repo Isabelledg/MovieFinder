@@ -1,5 +1,6 @@
 class UserMoviesController < ApplicationController
   def create
+    raise
     @group = Group.find(params[:group_id])
     @user_group = UserGroup.find(params[:user_group_id])
     @movie = Movie.find(params[:format])

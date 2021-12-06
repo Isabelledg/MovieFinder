@@ -13,18 +13,20 @@
 
     <ul>
       <% @group.users.each do |user| %>
-      <li><%= user.name %></li>
+        <li><%= user.name %></li>
       <% end %>
     </ul>
     <% if current_user.groups.include?(@group) %>
       <h2>You belong to this group</h2  >
     <% else %>
-     <%= simple_form_for [@group, UserGroup.new] do |f| %>
-      <%= f.error_notification %>
-        <%= f.input :password, required: true %>
-        <%= f.submit 'Join' %>
+      <%= simple_form_for [@group, UserGroup.new] do |f| %>
+          <%= f.error_notification %>
+            <%= f.input :password, required: true %>
+            <%= f.submit 'Join' %>
 
+        <% end %>
     <% end %>
+
   </div>
 
 

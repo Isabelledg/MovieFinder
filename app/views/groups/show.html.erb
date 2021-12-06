@@ -16,12 +16,17 @@
     <li><%= user.name  %></li>
     <% end %>
     </ul>
-    <%= simple_form_for [@group, UserGroup.new] do |f| %>
+    <% if current_user.groups.include?(@group) %>
+      <h2>You belong to this group</h2  >
+    <% else %>
+     <%= simple_form_for [@group, UserGroup.new] do |f| %>
       <%= f.error_notification %>
         <%= f.input :password, required: true %>
 
         <%= f.submit 'Join' %>
       <% end %>
+    <% end %>
+
 
     <div>
     <%= link_to 'Back', groups_path, class: "previous"%>

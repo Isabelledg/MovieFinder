@@ -47,6 +47,14 @@ div.form-check {
 
 }
 
+a#sign_up_btn.button {
+  height: 32px;
+  margin-top: 23px;
+}
+input#login_btn.button:hover {
+  height: 32px;
+  margin-top: 23px;
+}
 // Style for groups/new.html.erb
 div.create-group {
   width: 100%;
@@ -56,4 +64,3 @@ div.create-group-page {
   width: 80%;
   margin: 0 auto;
 }
-

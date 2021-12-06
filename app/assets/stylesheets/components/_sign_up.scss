@@ -40,6 +40,7 @@ h2#sign_up {
   border-radius: 7px;
   background: linear-gradient(to right, #bbd2c5, #536976, #292e49);
   opacity: 1;
+ // height: 35px;
 }
 
 // Button Styling - Specific
@@ -70,6 +71,14 @@ h2#sign_up {
     1px 1px 9px #EEEEEE;
 }
 
+a#login_btn.button {
+  height: 32px;
+  margin-top: 23px;
+}
+input#sign_up_btn.button:hover {
+  height: 32px;
+  margin-top: 23px;
+}
 // Styling for both pages
 
 form#new_user {

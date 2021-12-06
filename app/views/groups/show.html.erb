@@ -6,12 +6,10 @@
 
   <div class="group-info">
 
-    <div class="group-info-2">
-      <p id="groups-name">GROUP NAME:  <%= @group.name %></p>
-      <p>CREATED BY:  </p>
-      <p class="group-creator"><%= @user_group.user.name %></p>
-      <p>GROUP MEMBERS:  </p>
-    </div>
+    <p id="groups-name">GROUP NAME:  <%= @group.name %></p>
+    <p>CREATED BY:  </p>
+    <p class="group-creator"><%= @user_group.user.name %></p>
+    <p style="margin-bottom: 5px;">GROUP MEMBERS:  </p>
     <ul>
       <% @group.users.each do |user| %>
       <li><%= user.name %></li>

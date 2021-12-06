@@ -1,0 +1,5 @@
+<div>
+  <% @results.each do |result| %>
+    <div><%= result[0].title %>:<%= (result[1] * 100).round %>%</div>
+  <% end %>
+</div>

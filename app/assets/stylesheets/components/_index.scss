@@ -7,81 +7,74 @@
 @import "friends";
 @import 'group-show';
 
-// style for views/groups/new.html.erb
-.groups-container {
-  margin: 20px 30px 30px;
-  text-align: center;
+// HTML file -> views/groups/new.html.erb
+body {
+  position:relative;
 }
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px black;
- // letter-spacing: 10px;
+div.groups {
+  width: 100%;
+  margin: 0 auto;
 }
 .container {
   width: 100%;
+  min-height: none;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
   margin: 0 auto;
-  padding: 40px 30px;
-  min-height: 80vh;
-
+  margin-top: 80px;
 }
-.fas-logo {
 
+i.fas {
+  font-size: 90px;
+  color: #5E5E5E;
+  text-shadow: -2px 3px 5px #EEEEEE;
 }
-.button-one {
-  font-size: 16px;
-  width: 170px;
-  text-align: center;
-  margin: 0 auto;
-  color: white;
-  padding: 10px 20px;
+
+h2#grp {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-shadow: 1px 1px 1px black;
-  border: solid 2px #EEEEEE;
-  border-radius: 7px;
-  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
-  margin: 10px auto;
-  opacity: 0.7;
-  text-decoration: none;
+  margin: 0 auto;
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 0.9cm;
 }
-p.button-one:hover {
-  text-decoration: none;
-  opacity: 1;
-}
-p {
-  font-weight: bold;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-}
-.create-group-page {
-  text-shadow: 1px 1px 1px black;
+input#query {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: solid 2px #536976;
+  height: 28px;
 }
 
-[type="submit"]  {
-  font-size: 16px;
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  color: white;
-  padding: 10px 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px black;
-  border: solid 2px #EEEEEE;
-  border-radius: 7px;
-  background: linear-gradient(111deg, rgba(195,20,50,1) 1%, rgb(0, 0, 0) 100%);
-  margin: 10px auto;
-  opacity: 0.7;
+// Buttons Styling
+
+#group-name, #back {
   text-decoration: none;
+  display: block;
+  width: 100px;
+  padding: 3px 5px;
+  margin: 10px auto 25px;
+  box-shadow:
+    -1px -1px 5px #EEEEEE,
+    -1px 1px 5px #EEEEEE,
+    1px -1px 5px #EEEEEE,
+    1px 1px 5px #EEEEEE;
 }
-.previous a {
-  color: white;
-}
-.previous a:hover {
-  color: white;
+#group-name:hover, #back:hover, #sign_up_btn:active, #login_btn:active {
   text-decoration: none;
-  opacity: 1;
+  color: white;
+  box-shadow:
+    -1px -1px 9px #EEEEEE,
+    -1px 1px 9px #EEEEEE,
+    1px -1px 9px #EEEEEE,
+    1px 1px 9px #EEEEEE;
+}
+#group-name {
+  width: 150px;
+}
+#back {
+  position: fixed;
+  left: 40px;
+  bottom: 20px;
 }

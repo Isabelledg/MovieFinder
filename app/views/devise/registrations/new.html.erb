@@ -1,7 +1,11 @@
+<!-- SIGN UP PAGE -->
+<!-- CSS file -> components/_sign_up.scss -->
+
 <div class="sign_up">
-  <div class="sign-up-container">
+
+  <div class="first-container">
     <i class="fas fa-film"></i>
-    <h2 class="sign-up-header">SIGN UP</h2>
+    <h2 id="sign_up">SIGN UP</h2>
   </div>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -23,8 +27,8 @@
   </div>
 
     <div class="form-actions">
-      <%= link_to "Log in", new_user_session_path, class: "back" %>
-      <%= f.button :submit, "Sign up", class: "sign-up" %>
+      <%= link_to "Log in", new_user_session_path, class: "button", id: "login_btn" %>
+      <%= f.button :submit, "Sign up", class: "button", id: "sign_up_btn" %>
     </div>
   <% end %>
 </div>

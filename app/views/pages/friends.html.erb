@@ -1,10 +1,18 @@
+<!-- JOIN GROUP OR CREATE GROUP PAGE -->
+<!-- CSS file -> components/_friends.scss -->
+
 <div class="create-join-group">
+
+  <div class="first-container">
     <i class="fas fa-film"></i>
+    <h2 id="join-create">JOIN/CREATE GROUP</h2>
+  </div>
+
   <% if @groups.empty? %>
     <button type="button" class="btn btn-lg btn-primary" disabled>Join group</button>
   <% else %>
-    <%= link_to "Join group", groups_path, class: " join-group" %>
+    <%= link_to "Join group", groups_path, class: "button", id: "join-group" %>
   <% end %>
 
-  <%= link_to "Create group", new_group_path, class: "create-group" %>
+  <%= link_to "Create group", new_group_path, class: "button", id: "create-group" %>
 </div>

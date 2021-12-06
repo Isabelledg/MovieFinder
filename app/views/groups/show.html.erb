@@ -3,27 +3,39 @@
 
 <div class= "group-info-container">
 
+    <div class="group-card">
+      <img class="img-genre"src="https://s.studiobinder.com/wp-content/uploads/2019/09/Movie-Genres-Types-of-Movies-List-of-Genres-and-Categories-Header-StudioBinder.jpg" />
+      <div class="group-card-infos">
+        <p id="groups-name"><b>GROUP NAME</b></p>
+        <p><%= @group.name %></p>
+        <p><b>MOVIE GENRE</b> <i class="fas fa-theater-masks"></i></p>
+        <p><b>CREATED BY</b></p>
+        <p class="group-creator"><%= @user_group.user.name %></p>
+        <p><b>GROUP MEMBERS</b></p>
+        <ul>
+          <% @group.users.each do |user| %>
+            <li><%= user.name %></li>
+          <% end %>
+        </ul>
+      </div>
 
-  <div class="group-info">
+  </div>
 
-    <p id="groups-name">GROUP NAME:  <%= @group.name %></p>
-    <p>CREATED BY:  </p>
-    <p class="group-creator"><%= @user_group.user.name %></p>
-    <p style="margin-bottom: 5px;">GROUP MEMBERS:  </p>
 
-    <ul>
-      <% @group.users.each do |user| %>
-      <li><%= user.name %></li>
-      <% end %>
-    </ul>
+
+
+
+
+
+
     <% if current_user.groups.include?(@group) %>
-      <h2>You belong to this group</h2  >
+      <p>Hey! Enjoy the movie </p>
     <% else %>
      <%= simple_form_for [@group, UserGroup.new] do |f| %>
       <%= f.error_notification %>
         <%= f.input :password, required: true %>
         <%= f.submit 'Join' %>
-
+    <% end %>
     <% end %>
   </div>
 

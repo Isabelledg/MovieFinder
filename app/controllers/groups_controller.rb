@@ -27,7 +27,7 @@ class GroupsController < ApplicationController
     # auto-join group creator
     UserGroup.create(user: current_user, group: @group, password: group_params[:password])
     if @group.save
-      redirect_to group_genre_movies_path(@group)
+      redirect_to group_path(@group)
     else
       render :new
     end

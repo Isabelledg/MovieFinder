@@ -3,7 +3,7 @@
 
 
 .group-info {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .group-info {
@@ -11,5 +11,51 @@
 }
 ul {
   list-style-type: none;
-  padding: 0 0 0 80px;
+  padding: 5px;
+}
+
+// CARD STYLING
+
+.group-card {
+  overflow: hidden;
+  width: 80%;
+  height: auto;
+  background: rgba(83, 105, 118, 0.8);
+  border: 1px 1px 1px white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.img-genre {
+  width: 90%;
+  margin: 10px auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: -2px -2px 2px black;
+}
+
+.group-card-infos {
+  color: white;
+  margin: 0 auto;
+}
+
+.group-card-infos p {
+  margin-bottom: 5px;
+}
+.fas.fa-theater-masks {
+  font-size: 14px;
+  color: #BBD2C5;
+  text-shadow: none;
+}
+.group-card-infos p b {
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  margin-top: 7px;
 }

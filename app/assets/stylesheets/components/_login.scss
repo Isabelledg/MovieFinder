@@ -42,14 +42,25 @@ div.form-check {
   padding: 5px 0 0 20px;
 }
 
-
-
-
-
-
-
-
 // dropdown menu does not display in login_view
 .navbar-toggler {
 
+}
+
+a#sign_up_btn.button {
+  height: 32px;
+  margin-top: 23px;
+}
+input#login_btn.button:hover {
+  height: 32px;
+  margin-top: 23px;
+}
+// Style for groups/new.html.erb
+div.create-group {
+  width: 100%;
+  margin: 0 auto;
+}
+div.create-group-page {
+  width: 80%;
+  margin: 0 auto;
 }

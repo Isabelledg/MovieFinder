@@ -1,11 +1,15 @@
 // HTML file -> views/groups      /show.html.erb
 
 
-.group-show {
-  text-align: left;
-  margin: 20px 200px;
-}
 
-.center {
-  text-align: center;
+.group-info {
+  width: 80%;
+  margin: 0 auto;
+}
+.group-info {
+  margin-top: 80px;
+}
+ul {
+  list-style-type: none;
+  padding: 0 0 0 80px;
 }

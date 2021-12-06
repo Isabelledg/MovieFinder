@@ -1,22 +1,20 @@
 <!-- DISPLAY LIST/INDEX/DETAILS OF USERS/GROUPS -->
 <!-- CSS file -> components/_group-show.scss -->
 
-<div class= "container">
-  <div class= "group-show">
-    <div class="center">
-      <i class="fas fa-film"></i>
+<div class= "group-info-container">
 
-      <h1><%= @group.name %></h1>
-    </div>
-    <h3> Created by: </h3>
-    <h4><%= @user_group.user.name %></h4>
-    <h3> Genre: </h3>
-    <h4><%=  %></h4>
-    <h3> Group members: </h3>
+
+  <div class="group-info">
+
+    <p id="groups-name">GROUP NAME:  <%= @group.name %></p>
+    <p>CREATED BY:  </p>
+    <p class="group-creator"><%= @user_group.user.name %></p>
+    <p style="margin-bottom: 5px;">GROUP MEMBERS:  </p>
+
     <ul>
-    <% @group.users.each do |user| %>
-    <li><%= user.name  %></li>
-    <% end %>
+      <% @group.users.each do |user| %>
+      <li><%= user.name %></li>
+      <% end %>
     </ul>
     <% if current_user.groups.include?(@group) %>
       <h2>You belong to this group</h2  >
@@ -24,14 +22,14 @@
      <%= simple_form_for [@group, UserGroup.new] do |f| %>
       <%= f.error_notification %>
         <%= f.input :password, required: true %>
-
         <%= f.submit 'Join' %>
-      <% end %>
+
     <% end %>
-
-
-    <div>
-    <%= link_to 'Back', groups_path, class: "previous"%>
-    </div>
   </div>
+
+
+  <div>
+    <%= link_to 'Back', groups_path, class: "button", id: "back"%>
+  </div>
+
 </div>

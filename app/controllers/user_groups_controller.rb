@@ -5,7 +5,7 @@ class UserGroupsController < ApplicationController
     @user_group.user = current_user
     @user_group.group = @group
     if @user_group.save
-      redirect_to group_user_genres_path(@group) # fix path to genre_movies
+      redirect_to group_path(@group) # fix path to genre_movies
     else
       render :new
     end

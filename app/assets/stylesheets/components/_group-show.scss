@@ -21,8 +21,8 @@ ul {
   width: 80%;
   height: auto;
   background: rgba(83, 105, 118, 0.8);
-  border: 1px 1px 1px white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px 1px 1px black;
+  box-shadow: 0 0 14px black;
   margin: 0 auto;
   margin-top: 40px;
   display: flex;
@@ -38,7 +38,7 @@ ul {
   margin: 10px auto;
   height: auto;
   border-radius: 10px;
-  box-shadow: -2px -2px 2px black;
+  box-shadow: 0 2px 5px black;
 }
 
 .group-card-infos {
@@ -48,8 +48,9 @@ ul {
 
 .group-card-infos p {
   margin-bottom: 5px;
+  text-shadow: 1px 1px 4px black;
 }
-.fas.fa-theater-masks {
+.fas.fa-theater-masks, .fas.fa-user-edit, .fas.fa-users {
   font-size: 14px;
   color: #BBD2C5;
   text-shadow: none;
@@ -58,4 +59,38 @@ ul {
   letter-spacing: 2px;
   margin-bottom: 5px;
   margin-top: 7px;
+}
+
+div.movie_night_begin {
+  text-align: center;
+}
+p#movie_night_begin {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px black;
+}
+
+.select_movie {
+  width: 80%;
+  margin: 0 auto;
+}
+#select_movie {
+  display: block;
+  width: 100%;
+  padding: 3px 5px;
+  box-shadow:
+    -1px -1px 5px #EEEEEE,
+    -1px 1px 5px #EEEEEE,
+    1px -1px 5px #EEEEEE,
+    1px 1px 5px #EEEEEE;
+}
+#select_movie:hover, #select_movie:active {
+  text-decoration: none;
+  color: white;
+  box-shadow:
+    -1px -1px 9px #EEEEEE,
+    -1px 1px 9px #EEEEEE,
+    1px -1px 9px #EEEEEE,
+    1px 1px 9px #EEEEEE;
 }

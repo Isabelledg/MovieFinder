@@ -30,13 +30,13 @@ h2#sign_up {
 }
 
 // Button Styling - General
-.button {
+.button, [type="submit"]:not(:disabled) {
   font-size: 16px;
   text-align: center;
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 1px 1px 1px black;
   border-radius: 7px;
   background: linear-gradient(to right, #bbd2c5, #536976, #292e49);
   opacity: 1;
@@ -49,7 +49,7 @@ h2#sign_up {
   margin-top: 30px;
 }
 
-#sign_up_btn, #login_btn {
+#sign_up_btn, #login_btn, [type="submit"]:not(:disabled) {
   display: block;
   width: 100px;
   padding: 3px 5px;
@@ -60,7 +60,7 @@ h2#sign_up {
     1px 1px 5px #EEEEEE;
 }
 
-#sign_up_btn:hover, #login_btn:hover, #sign_up_btn:active, #login_btn:active {
+#sign_up_btn:hover, #login_btn:hover, #sign_up_btn:active, #login_btn:active, [type="submit"]:not(:disabled):hover, [type="submit"]:not(:disabled):active {
   text-decoration: none;
   color: white;
   box-shadow:
@@ -70,7 +70,7 @@ h2#sign_up {
     1px 1px 9px #EEEEEE;
 }
 
-//--------------------------------
+// Styling for both pages
 
 form#new_user {
   width: 80%;
@@ -107,18 +107,10 @@ label.required {
   margin: 0;
 }
 
-/*------------------------------------------------*/
-.container {
-  width: 100%;
+// Styling for groups/new.html.erb
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+  width: 140px;
   margin: 0 auto;
-  padding: 40px 30px;
-  position: relative;
-
-}
-
-.create-group-pag {
-  width: 90%;
-  font-weight: bold;
-  text-shadow: black 1px 1px 1px;
-  margin: 0px auto;
+  margin-top: 25px;
 }

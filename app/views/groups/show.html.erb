@@ -1,30 +1,31 @@
 <!-- DISPLAY LIST/INDEX/DETAILS OF USERS/GROUPS -->
 <!-- CSS file -> components/_group-show.scss -->
 
-<div class= "container">
-  <div class= "group-show">
-    <div class="center">
-      <i class="fas fa-film"></i>
+<div class= "group-info-container">
 
-      <h1><%= @group.name %></h1>
+
+  <div class="group-info">
+
+    <div class="group-info-2">
+      <p id="groups-name">GROUP NAME:  <%= @group.name %></p>
+      <p>CREATED BY:  </p>
+      <p class="group-creator"><%= @user_group.user.name %></p>
+      <p>GROUP MEMBERS:  </p>
     </div>
-    <h3> Created by: </h3>
-    <h4><%= @user_group.user.name %></h4>
-    <h3> Group members: </h3>
     <ul>
-    <% @group.users.each do |user| %>
-    <li><%= user.name  %></li>
-    <% end %>
+      <% @group.users.each do |user| %>
+      <li><%= user.name %></li>
+      <% end %>
     </ul>
     <%= simple_form_for [@group, UserGroup.new] do |f| %>
       <%= f.error_notification %>
         <%= f.input :password, required: true %>
-
         <%= f.submit 'Join' %>
-      <% end %>
-
-    <div>
-    <%= link_to 'Back', groups_path, class: "previous"%>
-    </div>
+    <% end %>
   </div>
+
+  <div>
+    <%= link_to 'Back', groups_path, class: "button", id: "back"%>
+  </div>
+
 </div>

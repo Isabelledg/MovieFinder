@@ -9,6 +9,7 @@
   padding: 10px;
   margin: 0 auto;
   margin-top: 60px;
+  text-align: center;
 }
 
 i.fas {
@@ -29,6 +30,7 @@ h2 {
   font-size: 14px;
   letter-spacing: 3px;
   padding-top: 10px;
+  margin: 0 auto;
 }
 
 #movie_finder {
@@ -47,7 +49,7 @@ h2 {
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 1px 1px 1px black;
   border-radius: 7px;
   background: linear-gradient(to right, #bbd2c5, #536976, #292e49);
   opacity: 1;

@@ -84,3 +84,20 @@ h2 {
     text-decoration: none;
     background-color: transparent;
 }
+
+.bannerfriends {
+  background-size: cover;
+  background-position: center;
+  padding: 60% 0;
+  height: 100vh;
+}
+
+.bannerfriends h1 {
+  font-family: Roboto ;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(96, 92, 92, 0.8);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}

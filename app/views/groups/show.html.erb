@@ -50,9 +50,20 @@
       <% end %>
     </div>
     <br>
+   
 
   </div>
-   <p>Wating fo the other members to vote</p>
+  <% if !@non_votants.empty? %>
+    <p>Wating to the other members to vote:</p>
+    <% @non_votants.each do |non_votant| %>
+      <p><%= non_votant.user.name %></p>
+    <% end %>
+  <% else %>
+    <p>Everyone voted :D</p>
+    <%= link_to 'Result', results_path(@group),  class: "button" %>
+
+  <% end %>
+   
 
 
   <!-- <div>

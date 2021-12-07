@@ -1,4 +1,5 @@
 class UserGroup < ApplicationRecord
+  attr_accessor :password
   belongs_to :user
   belongs_to :group
 
@@ -9,7 +10,9 @@ class UserGroup < ApplicationRecord
   validates :user, uniqueness: { scope: :group }
 
   attribute :password, type: String
-  validate :valid_password
+  validate :valid_password, on: :create
+
+  
 
   private
 

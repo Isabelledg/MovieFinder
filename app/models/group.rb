@@ -2,7 +2,7 @@ class Group < ApplicationRecord
   has_many :user_groups
   has_many :users, through: :user_groups
 
-  has_one :genre
+  belongs_to :genre
 
   attribute :password_confirmation, type: String
 

@@ -14,21 +14,23 @@
         <p><b>GROUP MEMBERS</b> <i class="fas fa-users"></i></p>
         <ul>
           <% @group.users.each do |user| %>
-            <li><%= user.name %></li>
+            <div class="list">
+              <li><%= user.name %></li>
+            </div>
           <% end %>
         </ul>
       </div>
 
   </div>
 
-    <ul>
+    <!--<ul>
       <% @group.users.each do |user| %>
         <li><%= user.name %></li>
       <% end %>
-    </ul>
+    </ul>-->
 
     <% if current_user.groups.include?(@group) %>
-      <h2>Welcome to your group!</h2  >
+     <!-- <h2>Welcome to your group!</h2  > -->
     <% else %>
       <%= simple_form_for [@group, UserGroup.new] do |f| %>
         <%= f.error_notification %>
@@ -36,26 +38,28 @@
         <%= f.submit 'Join' %>
       <% end %>
     <% end %>
-    <div>
-      <% if @empty_movies %>
-        <%= link_to 'Start voting', group_movies_path(@group),  class: "button" %>
-      <% else %>
-      <br>
-      <% if !@user_group.nil? %>
-       <p>Movies that you pick:</p>
-        <% @user_group.movies.each do |movie| %>
-          <p><%= movie.title %></p>
+    <div class="group-card">
+      <div class="group-card-infos">
+        <% if @empty_movies %>
+          <%= link_to 'Start voting', group_movies_path(@group),  class: "button" %>
+        <% else %>
+        <br>
+        <% if !@user_group.nil? %>
+          <p>Your choices:</p>
+          <% @user_group.movies.each do |movie| %>
+            <div class="list">
+              <li><%= movie.title %></li>
+            </div>
+          <% end %>
+          <% end %>
         <% end %>
-        <% end %>
-      <% end %>
+        <br>
+        <br>
+        <p>Wating for your group members to vote...</p>
+      </div>
     </div>
     <br>
-
-  </div>
-   <p>Wating fo the other members to vote</p>
-
 
   <!-- <div>
     <%#= link_to 'Back', groups_path, class: "button", id: "back"%>
   </div> -->
-</div>

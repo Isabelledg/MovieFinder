@@ -75,6 +75,33 @@ input#query {
   width: 150px;
 }
 #back {
-  
+}
 
+// movies/index.html.erb
+
+.group-info-container {
+
+}
+
+.movie_choice_input {
+  position: absolute;
+  transform: scale(0);
+}
+.movie_choice_input + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 50rem;
+  padding: 0.2rem 0.6rem;
+  background-color: rgba(187, 210, 197, 1);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 0 2px 4px black;
+  //border: 1px solid black;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.movie_choice_input:checked + label {
+  background-color: rgba(187, 210, 197, 0.5);
+  text-shadow: 1px 1px 2px black;
 }

@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+body {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  background: #536976;
+  // background: linear-gradient(115deg, #3d0000, #950101);
+  background-repeat: no-repeat ;
+  background-size: cover ;
+}

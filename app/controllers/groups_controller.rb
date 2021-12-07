@@ -6,7 +6,14 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @user_group = UserGroup.find_by(group: @group)
+    @user_group = UserGroup.find_by(group: @group, user: current_user)
+    if !@user_group.nil?
+    @empty_movies = @user_group.movies.empty?
+    end
+
+    
+    @group.user_groups.where(voted: false).empty? ? @non_votants = [] : @non_votants = @group.user_groups.where(voted: false)
+
   end
 
   def index
@@ -24,9 +31,10 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     @group.genre_id = group_params[:genre_id]
+    @group.user = current_user
     # auto-join group creator
-    UserGroup.create(user: current_user, group: @group, password: group_params[:password])
     if @group.save
+      UserGroup.create(user: current_user, group: @group, password: group_params[:password])
       redirect_to group_path(@group)
     else
       render :new

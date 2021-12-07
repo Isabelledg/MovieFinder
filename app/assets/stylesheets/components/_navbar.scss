@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
-  left: 55px;
+  left: 25px;
   top: 17px;
 }
 
@@ -74,9 +74,19 @@
   font-size: 13px;
   color:#EEEEEE;
   padding: 2px 10px;
-  text-shadow: 1px 1px black;
+  //text-shadow: 1px 1px black;
   font-weight: normal;
 }
+
+#username {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color:#EEEEEE;
+  padding: 2px 10px;
+  //text-shadow: 1px 1px black;
+  font-weight: normal;
+}
+
 .dropdown-item:hover {
   background: linear-gradient(to right, #bbd2c5, #536976, #292e49);
   font-size: 15px;

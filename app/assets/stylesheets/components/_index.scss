@@ -56,12 +56,12 @@ input#query {
   display: block;
   width: 100px;
   padding: 3px 5px;
-  margin: 10px auto 25px;
-  box-shadow:
+  // margin: 10px auto 25px;
+  /* box-shadow:
     -1px -1px 5px #EEEEEE,
     -1px 1px 5px #EEEEEE,
     1px -1px 5px #EEEEEE,
-    1px 1px 5px #EEEEEE;
+    1px 1px 5px #EEEEEE; */
 }
 #group-name:hover, #back:hover, #sign_up_btn:active, #login_btn:active {
   text-decoration: none;
@@ -76,7 +76,14 @@ input#query {
   width: 150px;
 }
 #back {
-  position: fixed;
-  left: 40px;
-  bottom: 20px;
+  
+
+}
+
+.list {
+  text-shadow: 1px 1px 4px black;
+}
+
+.choices {
+  font-size: 14px Roboto, sans-serif;
 }

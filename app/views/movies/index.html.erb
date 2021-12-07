@@ -1,9 +1,19 @@
-<h1>Movies</h1>
-<p>pick some movies from this list</p>
+<div class= "group-info-container">
+<div class="group-card">
+  <h1>Movies</h1>
+  <p>Pick your favourites below!</p>
+  <%= simple_form_for [@group, @user_group, UserMovie.new ] do |f| %>
+      <%= f.error_notification %>
+     <%  @movies.each do |movie| %>
+      <p></p>
 
-
-<ul>
-  <% @movies.each do |movie| %>
-    <li class="button-movie"><%= movie.title %></li>
+            <input type="checkbox" id="<%= movie.title %>" name="movies[<%= movie.id %>]">
+            <label for="<%= movie.title %>"><%= movie.title %></label>
      <% end %>
-</ul>
+
+
+      <%#= f.association :movie, include_blank: false,label: false %>
+      <%= f.submit "Submit my vote" %>
+      </div>
+</div>
+  <% end %>

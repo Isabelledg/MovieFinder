@@ -23,11 +23,13 @@ ActiveRecord::Schema.define(version: 2021_12_06_125419) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name", null: false
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password", null: false
     t.bigint "genre_id"
     t.index ["genre_id"], name: "index_groups_on_genre_id"
+    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "movie_genres", force: :cascade do |t|
@@ -58,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_125419) do
   create_table "user_groups", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "group_id", null: false
+    t.boolean "voted", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["group_id"], name: "index_user_groups_on_group_id"
@@ -96,6 +99,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_125419) do
   end
 
   add_foreign_key "groups", "genres"
+  add_foreign_key "groups", "users"
   add_foreign_key "movie_genres", "genres"
   add_foreign_key "movie_genres", "movies"
   add_foreign_key "user_groups", "groups"

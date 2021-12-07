@@ -3,41 +3,70 @@
 
 <div class= "group-info-container">
 
+    <div class="group-card">
+      <img class="img-genre"src="https://s.studiobinder.com/wp-content/uploads/2019/09/Movie-Genres-Types-of-Movies-List-of-Genres-and-Categories-Header-StudioBinder.jpg" />
+      <div class="group-card-infos">
+        <p id="groups-name"><b>GROUP NAME</b></p>
+        <p><%= @group.name %></p>
+        <p><b>MOVIE GENRE</b> <i class="fas fa-theater-masks"></i></p>
+        <p><b>CREATED BY</b> <i class="fas fa-user-edit"></i></p>
+        <p class="group-creator"><%= @group.user.name %></p>
+        <p><b>GROUP MEMBERS</b> <i class="fas fa-users"></i></p>
+        <ul>
+          <% @group.users.each do |user| %>
+            <li><%= user.name %></li>
+          <% end %>
+        </ul>
+      </div>
 
-  <div class="group-info">
-
-    <p id="groups-name">GROUP NAME:  <%= @group.name %></p>
-    <p>CREATED BY:  </p>
-    <p class="group-creator"><%= @user_group.user.name %></p>
-    <p style="margin-bottom: 5px;">GROUP MEMBERS:  </p>
+  </div>
 
     <ul>
       <% @group.users.each do |user| %>
         <li><%= user.name %></li>
       <% end %>
     </ul>
+
     <% if current_user.groups.include?(@group) %>
-      <h2>You belong to this group</h2  >
+      <h2>Welcome to your group!</h2  >
     <% else %>
       <%= simple_form_for [@group, UserGroup.new] do |f| %>
-          <%= f.error_notification %>
-            <%= f.input :password, required: true %>
-            <%= f.submit 'Join' %>
-
-        <% end %>
+        <%= f.error_notification %>
+        <%= f.input :password, required: true %>
+        <%= f.submit 'Join' %>
+      <% end %>
     <% end %>
-     <div>
-    <%= link_to 'Select the amazing movie for this movie night- Vote Now', group_movies_path(@group),  class: "button" %>
-  </div>
-  <br>
+    <div>
+      <% if @empty_movies %>
+        <%= link_to 'Start voting', group_movies_path(@group),  class: "button" %>
+      <% else %>
+      <br>
+      <% if !@user_group.nil? %>
+       <p>Movies that you pick:</p>
+        <% @user_group.movies.each do |movie| %>
+          <p><%= movie.title %></p>
+        <% end %>
+        <% end %>
+      <% end %>
+    </div>
+    <br>
+   
 
   </div>
+  <% if !@non_votants.empty? %>
+    <p>Wating to the other members to vote:</p>
+    <% @non_votants.each do |non_votant| %>
+      <p><%= non_votant.user.name %></p>
+    <% end %>
+  <% else %>
+    <p>Everyone voted :D</p>
+    <%= link_to 'Result', results_path(@group),  class: "button" %>
+
+  <% end %>
+   
 
 
-
-
-  <div>
-    <%= link_to 'Back', groups_path, class: "button", id: "back"%>
-  </div>
-
+  <!-- <div>
+    <%#= link_to 'Back', groups_path, class: "button", id: "back"%>
+  </div> -->
 </div>

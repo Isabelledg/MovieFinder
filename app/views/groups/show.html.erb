@@ -10,7 +10,7 @@
         <p><%= @group.name %></p>
         <p><b>MOVIE GENRE</b> <i class="fas fa-theater-masks"></i></p>
         <p><b>CREATED BY</b> <i class="fas fa-user-edit"></i></p>
-        <p class="group-creator"><%= @user_group.user.name %></p>
+        <p class="group-creator"><%= @group.user.name %></p>
         <p><b>GROUP MEMBERS</b> <i class="fas fa-users"></i></p>
         <ul>
           <% @group.users.each do |user| %>
@@ -40,15 +40,22 @@
       <% if @empty_movies %>
         <%= link_to 'Select the amazing movie for this movie night- Vote Now', group_movies_path(@group),  class: "button" %>
       <% else %>
+      <br>
+      <% if !@user_group.nil? %>
+       <p>Movies that you pick:</p>
         <% @user_group.movies.each do |movie| %>
           <p><%= movie.title %></p>
+        <% end %>
         <% end %>
       <% end %>
     </div>
     <br>
 
   </div>
-  <div>
-    <%= link_to 'Back', groups_path, class: "button", id: "back"%>
-  </div>
+   <p>Wating fo the other members to vote</p>
+
+
+  <!-- <div>
+    <%#= link_to 'Back', groups_path, class: "button", id: "back"%>
+  </div> -->
 </div>

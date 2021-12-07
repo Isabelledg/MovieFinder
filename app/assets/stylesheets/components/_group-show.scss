@@ -3,7 +3,7 @@
 
 
 .group-info {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .group-info {
@@ -11,5 +11,86 @@
 }
 ul {
   list-style-type: none;
-  padding: 0 0 0 80px;
+  padding: 5px;
+}
+
+// CARD STYLING
+
+.group-card {
+  overflow: hidden;
+  width: 80%;
+  height: auto;
+  background: rgba(83, 105, 118, 0.8);
+  border: 1px 1px 1px black;
+  box-shadow: 0 0 14px black;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.img-genre {
+  width: 90%;
+  margin: 10px auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px black;
+}
+
+.group-card-infos {
+  color: white;
+  margin: 0 auto;
+}
+
+.group-card-infos p {
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 4px black;
+}
+.fas.fa-theater-masks, .fas.fa-user-edit, .fas.fa-users {
+  font-size: 14px;
+  color: #BBD2C5;
+  text-shadow: none;
+}
+.group-card-infos p b {
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  margin-top: 7px;
+}
+
+div.movie_night_begin {
+  text-align: center;
+}
+p#movie_night_begin {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px black;
+}
+
+.select_movie {
+  width: 80%;
+  margin: 0 auto;
+}
+#select_movie {
+  display: block;
+  width: 100%;
+  padding: 3px 5px;
+  box-shadow:
+    -1px -1px 5px #EEEEEE,
+    -1px 1px 5px #EEEEEE,
+    1px -1px 5px #EEEEEE,
+    1px 1px 5px #EEEEEE;
+}
+#select_movie:hover, #select_movie:active {
+  text-decoration: none;
+  color: white;
+  box-shadow:
+    -1px -1px 9px #EEEEEE,
+    -1px 1px 9px #EEEEEE,
+    1px -1px 9px #EEEEEE,
+    1px 1px 9px #EEEEEE;
 }

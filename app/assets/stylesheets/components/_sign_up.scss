@@ -93,7 +93,6 @@ form#new_user {
 .form-control {
   border-radius: 8px;
   border: solid 2px #536976;
-  height: 28px;
 }
 .form-control:active, .form-control:hover {
   border-radius: 8px;
@@ -101,7 +100,7 @@ form#new_user {
   box-shadow:
     -1px -1px 4px white,
     1px 1px 4px white;
-  height: 28px;
+  //height: 28px;
 }
 .form-actions {
   display: flex;

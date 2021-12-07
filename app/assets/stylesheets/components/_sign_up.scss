@@ -55,7 +55,7 @@ h2#sign_up {
   width: 100px;
   padding: 3px 5px;
   box-shadow:
-    -1px -1px 5px #EEEEEE,
+    -1px -1px 5px #EEEEEE
     -1px 1px 5px #EEEEEE,
     1px -1px 5px #EEEEEE,
     1px 1px 5px #EEEEEE;
@@ -93,6 +93,7 @@ form#new_user {
 .form-control {
   border-radius: 8px;
   border: solid 2px #536976;
+  width: 100%;
 }
 .form-control:active, .form-control:hover {
   border-radius: 8px;
@@ -121,4 +122,10 @@ label.required {
   width: 140px;
   margin: 0 auto;
   margin-top: 25px;
+}
+
+.form-group {
+    width: 80%;
+    text-align: center;
+    margin: auto;
 }

@@ -10,9 +10,10 @@
             <input type="checkbox" id="<%= movie.title %>" name="movies[<%= movie.id %>]">
             <label for="<%= movie.title %>"><%= movie.title %></label>
      <% end %>
-  </div>
-</div>
+
 
       <%#= f.association :movie, include_blank: false,label: false %>
       <%= f.submit "Submit my vote" %>
+      </div>
+</div>
   <% end %>

@@ -34,9 +34,28 @@ class GroupsController < ApplicationController
     end
   end
 
+  def results
+    @group = Group.find(params[:id])
+    @results = movie_counter(@group)
+  end
+
   private
 
   def group_params
     params.require(:group).permit(:name, :genre_id, :password, :password_confirmation)
+  end
+
+  def movie_counter(group)
+    results = {}
+    group.user_groups.each do |user_group|
+      user_group.movies.each do |movie|
+        if results[movie].nil?
+          results[movie] = 1
+        else
+          results[movie] += 1
+        end
+      end
+    end
+    results.map { |movie, value| [movie, value.to_f / group.users.length] }
   end
 end

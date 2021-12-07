@@ -28,7 +28,7 @@
     </ul>
 
     <% if current_user.groups.include?(@group) %>
-      <h2>You belong to this group</h2  >
+      <h2>Welcome to your group!</h2  >
     <% else %>
       <%= simple_form_for [@group, UserGroup.new] do |f| %>
         <%= f.error_notification %>
@@ -38,7 +38,7 @@
     <% end %>
     <div>
       <% if @empty_movies %>
-        <%= link_to 'Select the amazing movie for this movie night- Vote Now', group_movies_path(@group),  class: "button" %>
+        <%= link_to 'Start voting', group_movies_path(@group),  class: "button" %>
       <% else %>
         <% @user_group.movies.each do |movie| %>
           <p><%= movie.title %></p>

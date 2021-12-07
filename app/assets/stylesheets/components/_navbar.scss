@@ -6,9 +6,11 @@
   flex-grow: 0;
 }
 
-//.navbar-lewagon .navbar-brand img {
-//  width: 40px;
-//}
+.navbar {
+  height: 10vh;
+  top: 0;
+  position: fixed;
+}
 
 #logo {
   display: flex;
@@ -35,8 +37,6 @@
   text-shadow:
     -2px -2px 4px white,
     -2px 2px 4px white,
-
-
 }
 
 // style for avatar

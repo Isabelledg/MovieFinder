@@ -4,6 +4,12 @@
 
 <%= simple_form_for [@group, @user_group, UserMovie.new ] do |f| %>
       <%= f.error_notification %>
-      <%= f.association :movie, include_blank: false,label: false %>
+     <%  @movies.each do |movie| %>
+      <p></p>
+
+            <input type="checkbox" id="<%= movie.title %>" name="movies[<%= movie.id %>]">
+            <label for="<%= movie.title %>"><%= movie.title %></label>
+     <% end %>
+      <%#= f.association :movie, include_blank: false,label: false %>
       <%= f.submit "Submit my vote" %>
   <% end %>

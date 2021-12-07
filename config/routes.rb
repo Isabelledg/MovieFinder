@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/groups/:id/results", to: "groups#results"
+  get "/groups/:id/results", to: "groups#results",  as: "results"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

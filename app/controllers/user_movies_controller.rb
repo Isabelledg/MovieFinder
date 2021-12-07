@@ -14,6 +14,11 @@ class UserMoviesController < ApplicationController
       @user_movie = UserMovie.new(user_group: @user_group, movie: movie)
       @user_movie.save
     end
+
+    #change the status of voted to true
+    @group.user_groups.where(user: current_user).first.update(voted: true)
+    
+    #redirect
     redirect_to @group
 
 

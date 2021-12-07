@@ -1,12 +1,11 @@
 <!-- DISPLAY LIST/INDEX/DETAILS OF USERS/GROUPS -->
 <!-- CSS file -> components/_group-show.scss -->
 
-<div class= "group-info-container">
-
-    <div class="group-card">
-      <img class="img-genre"src="https://s.studiobinder.com/wp-content/uploads/2019/09/Movie-Genres-Types-of-Movies-List-of-Genres-and-Categories-Header-StudioBinder.jpg" />
+<div class="banner-22" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.trynkle.com/site/wp-content/uploads/2021/01/the-cinema-industry-e1610964520156.jpg);">
+  <div class="container">
+    <div class="group-card-1">
       <div class="group-card-infos">
-        <p id="groups-name"><b>GROUP NAME</b></p>
+        <p id="groups-name"><b>GROUP NAME </b></p>
         <p><%= @group.name %></p>
         <p><b>MOVIE GENRE</b> <i class="fas fa-theater-masks"></i></p>
         <p><b>CREATED BY</b> <i class="fas fa-user-edit"></i></p>
@@ -18,17 +17,8 @@
           <% end %>
         </ul>
       </div>
-
   </div>
-
-    <ul>
-      <% @group.users.each do |user| %>
-        <li><%= user.name %></li>
-      <% end %>
-    </ul>
-
     <% if current_user.groups.include?(@group) %>
-      <h2>Welcome to your group!</h2  >
     <% else %>
       <%= simple_form_for [@group, UserGroup.new] do |f| %>
         <%= f.error_notification %>
@@ -41,32 +31,38 @@
         <%= link_to 'Start voting', group_movies_path(@group),  class: "button" %>
       <% else %>
       <br>
-      <% if !@user_group.nil? %>
-       <p>Movies that you pick:</p>
-        <% @user_group.movies.each do |movie| %>
-          <p><%= movie.title %></p>
+      <div class="group-card-1">
+        <% if !@user_group.nil? %>
+        <p><b>Your choices: </b></p>
+        <li>
+          <% @user_group.movies.each do |movie| %>
+            <%= movie.title %></li>
+          <% end %>
+          <% end %>
         <% end %>
+      </div>
+      </div>
+      <% if !@non_votants.empty? %>
+        <p>Wating to the other members to vote:</p>
+        <% @non_votants.each do |non_votant| %>
+          <p><%= non_votant.user.name %></p>
         <% end %>
+      <% else %>
+      <div class="voted-button">
+      <br>
+        <p><b>Everyone voted! </b></p>
+        <br>
+        <%= link_to 'Results', results_path(@group), class: "button-first" %>
+      </div>
       <% end %>
     </div>
-    <br>
-   
+    </div>
 
-  </div>
-  <% if !@non_votants.empty? %>
-    <p>Wating to the other members to vote:</p>
-    <% @non_votants.each do |non_votant| %>
-      <p><%= non_votant.user.name %></p>
-    <% end %>
-  <% else %>
-    <p>Everyone voted :D</p>
-    <%= link_to 'Result', results_path(@group),  class: "button" %>
 
-  <% end %>
-   
+
+
 
 
   <!-- <div>
     <%#= link_to 'Back', groups_path, class: "button", id: "back"%>
   </div> -->
-</div>

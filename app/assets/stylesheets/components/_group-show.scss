@@ -20,9 +20,10 @@ ul {
   overflow: hidden;
   width: 80%;
   height: auto;
-  background: rgba(83, 105, 118, 0.8);
+  background: rgba(83, 105, 118, 1);
   border: 1px 1px 1px black;
-  box-shadow: 0 0 14px black;
+  box-shadow: 0 0 10px black;
+  padding: 15px 10px 25px;
   margin: 0 auto;
   margin-top: 40px;
   display: flex;

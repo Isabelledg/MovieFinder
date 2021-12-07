@@ -7,7 +7,7 @@
      <%  @movies.each do |movie| %>
       <p></p>
 
-            <input type="checkbox" id="<%= movie.title %>" name="movies[<%= movie.id %>]">
+            <input class="movie_choice_input" type="checkbox" id="<%= movie.title %>" name="movies[<%= movie.id %>]">
             <label for="<%= movie.title %>"><%= movie.title %></label>
      <% end %>
 

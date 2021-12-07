@@ -5,9 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.destroy_all
 MovieGenre.destroy_all
+UserMovie.destroy_all
 Movie.destroy_all
+UserGroup.destroy_all
+Group.destroy_all
 Genre.destroy_all
 genre_movies = {"Action": ["Matrix", "Zorro", "Star Wars", "Terminator"], "Horror": ["Chuckie"], "Drama": ["Zorro"], "Fantasy": ["Star Wars", "Terminator"], "Comedy": ["Zoolander"]}
 genre_movies.each do |genre_name, movies|
@@ -18,3 +21,4 @@ genre_movies.each do |genre_name, movies|
     MovieGenre.create(movie: movie, genre: genre)
   end
 end
+puts "AMAZING SEEDS CREATED :D"

@@ -1,5 +1,8 @@
 <div>
-  <% @results.each do |result| %>
+  <% @results.sort().each do |result| %>
     <div><%= result[0].title %>:<%= (result[1] * 100).round %>%</div>
   <% end %>
 </div>
+
+<%= link_to 'Back to Group', group_path(@group),  class: "button" %>
+

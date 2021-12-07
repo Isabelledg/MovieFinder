@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_125419) do
   create_table "user_groups", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "group_id", null: false
+    t.boolean "voted", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["group_id"], name: "index_user_groups_on_group_id"

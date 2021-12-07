@@ -6,7 +6,8 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @user_group = UserGroup.find_by(group: @group)
+    @user_group = UserGroup.find_by(group: @group, user: current_user)
+    @empty_movies = @user_group.movies.empty?
   end
 
   def index

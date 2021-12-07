@@ -2,8 +2,8 @@
 <p>pick some movies from this list</p>
 
 
-<ul>
-  <% @movies.each do |movie| %>
-    <li class="button-movie"><%= movie.title %></li>
-     <% end %>
-</ul>
+<%= simple_form_for [@group, @user_group, UserMovie.new ] do |f| %>
+      <%= f.error_notification %>
+      <%= f.association :movie, include_blank: false,label: false %>
+      <%= f.submit "Submit my vote" %>
+  <% end %>

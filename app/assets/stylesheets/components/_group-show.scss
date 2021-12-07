@@ -31,6 +31,26 @@ ul {
   align-items: center;
   border-radius: 10px;
   font-size: 14px;
+  padding: 10% 0;
+}
+
+.group-card-1 {
+  overflow: hidden;
+  width: 80%;
+  height: auto;
+  background: rgba(99, 108, 113, 0.36);
+  border: 1px 1px 1px black;
+  opacity: 0.8;
+  box-shadow: 0 0 14px black;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10% 0;
 }
 
 .img-genre {
@@ -99,6 +119,6 @@ p#movie_night_begin {
   text-align: center;
 }
 
-.voting-button {
-
+.voted-button {
+text-align: center;
 }

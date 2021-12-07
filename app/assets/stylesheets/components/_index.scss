@@ -23,7 +23,8 @@ div.groups {
   flex-direction: column;
   padding: 10px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 i.fas {
@@ -75,7 +76,7 @@ input#query {
   width: 150px;
 }
 #back {
-  
+
 
 }
 
@@ -85,4 +86,10 @@ input#query {
 
 .choices {
   font-size: 14px Roboto, sans-serif;
+}
+
+.banner-22 {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }

@@ -20,12 +20,6 @@
       </div>
 
   </div>
-
-    <ul>
-      <% @group.users.each do |user| %>
-        <li><%= user.name %></li>
-      <% end %>
-    </ul>
     <div class="movie_night_begin">
       <% if current_user.groups.include?(@group) %>
         <p id="movie_night_begin">Let the Movie Night begin!</p>

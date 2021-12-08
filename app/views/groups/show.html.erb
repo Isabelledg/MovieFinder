@@ -52,9 +52,9 @@
       <% if !@non_votants.empty? %>
       <div class="group-card-6">
         <p><b>Still waiting for.....</b></p>
-        <li>
+
         <% @non_votants.each do |non_votant| %>
-          <%= non_votant.user.name %></li>
+          <li><%= non_votant.user.name %></li>
         <% end %>
       <% else %>
       <div class="group-card-3">

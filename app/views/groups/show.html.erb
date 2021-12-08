@@ -2,8 +2,8 @@
 <!-- CSS file -> components/_group-show.scss -->
 
 <% content_for :meta_title, "#{@group.name} is on #{DEFAULT_META["meta_product_name"]}" %>
-<% content_for :meta_description, @group.description %>
-<% content_for :meta_image, cl_image_path(@group.photo.path) %>
+<% content_for :meta_description, @group.name %>
+<%# content_for :meta_image, cl_image_path(@group.photo.path) %>
 
 <div class="banner-22" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.trynkle.com/site/wp-content/uploads/2021/01/the-cinema-industry-e1610964520156.jpg);">
   <div class="container">
@@ -35,7 +35,7 @@
     <br>
     <% end %>
       <% if @empty_movies %>
-        <%= link_to 'Start voting', group_movies_path(@group),  class: "button-first-vote" %>
+        <%= link_to 'Start voting', group_movies_path(@group),  class: "button-first-vote-1" %>
       <% else %>
     </div>
       <div class="group-card-1">
@@ -50,7 +50,7 @@
       </div>
       </div>
       <% if !@non_votants.empty? %>
-      <div class="group-card-3">
+      <div class="group-card-6">
         <p><b>Still waiting for.....</b></p>
         <li>
         <% @non_votants.each do |non_votant| %>

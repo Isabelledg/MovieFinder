@@ -52,10 +52,10 @@
 // style for dropdown-menu
 
 .navbar-nav.mr-auto {
-  position: absolute;
+  position: fixed;
   top: 55px;
   right: 13px;
-  z-index: 1000;
+  //z-index: 1000;
 }
 
 .navbar-expand-sm .navbar-nav .dropdown-menu {

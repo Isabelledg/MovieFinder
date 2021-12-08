@@ -1,5 +1,5 @@
 <div class="container">
-  <img src="https://e7.pngegg.com/pngimages/479/1019/png-clipart-morpheus-neo-the-matrix-youtube-red-pill-and-blue-pill-morpheus-pills-microphone-meme.png" class="resuls-img" alt="">
+  <%= image_tag "results-img.png", class: "results-img"%>
   <% @results.each do |result| %>
     <div class="card-results">
       <img src="https://toppng.com/uploads/preview/hotography-png-film-iconpng-red-movie-reel-png-video-flat-icon-11563035522oovtrmv28c.png" />
@@ -15,5 +15,5 @@
 </div>
 
 <div class="voted-button">
-  <a class="button" id="get_started" href="/groups">Back to Groups</a>
+  <a class="button" id="back_to_groups" href="/groups">Back to Groups</a>
 </div>

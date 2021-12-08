@@ -77,6 +77,13 @@ h2 {
   width: 150px;
   padding: 3px 5px;
   margin: 10px auto 25px;
+  border-radius: 3px;
+  box-shadow:
+   -1px -1px 2px #EEEEEE,
+    -1px 1px 2px #EEEEEE,
+    1px -1px 2px #EEEEEE,
+    1px 1px 2px #EEEEEE;
+
 }
 
 #join-group:hover, #create-group:hover, #join-group:active, #create-group:active {
@@ -112,16 +119,15 @@ h2 {
 }
 
 .button-first-vote-1 {
-    font-size: 20px;
-    text-align: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    //font-weight: bold;
-    text-shadow: 2px 2px 1px black;
-    background: #3D0000;
-    width: 170px;
-    padding: 7px 20px;
-    border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px black;
+  background: #3D0000;
+  width: 170px;
+  padding: 7px 20px;
 }
 
 .bannerfriends {

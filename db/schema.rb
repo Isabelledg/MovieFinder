@@ -46,7 +46,9 @@ ActiveRecord::Schema.define(version: 2021_12_06_125419) do
     t.text "description"
     t.integer "rating"
     t.integer "length"
-    t.string "director"
+    t.string "nfid"
+    t.string "imdbid"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

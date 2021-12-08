@@ -1,4 +1,3 @@
-require "byebug"
 require 'open-uri'
 require 'nokogiri'
 # This file should contain all the record creation needed to seed the database with its default values.

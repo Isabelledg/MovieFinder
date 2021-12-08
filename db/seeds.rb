@@ -49,16 +49,18 @@ movie_results.each do |movie|
     html_doc = Nokogiri::HTML(html_file)
 
     html_doc.search('.ipc-chip__text').each do |element|
-      gener_name = element.text.strip
-      gener_find = Genre.where(name: gener_name).first
+      gener_name = element.text.strip 
+      if ['Crime', 'Drama', 'Thriller', 'Comedy', 'Documentary', 'Romance', 'male nudity'].include? gener_name 
+        gener_find = Genre.where(name: gener_name).first 
 
-
-      if gener_find.nil?
-        gener_created = Genre.create(name: gener_name)
-        MovieGenre.create(movie: movie_created, genre: gener_created)
-      else
-        MovieGenre.create(movie: movie_created, genre: gener_find)
-        puts "gender already exist"
+        puts gener_name
+        if gener_find.nil?
+          gener_created = Genre.create(name: gener_name)
+          MovieGenre.create(movie: movie_created, genre: gener_created)
+        else
+          MovieGenre.create(movie: movie_created, genre: gener_find)
+          puts "gender already exist"
+        end
       end
     end
     puts "created"

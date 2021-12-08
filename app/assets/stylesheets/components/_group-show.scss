@@ -44,7 +44,27 @@ ul {
   opacity: 0.8;
   box-shadow: 0 0 14px black;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: -180px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10% 0;
+  text-align: center;
+}
+
+.group-card-7 {
+  overflow: hidden;
+  width: 80%;
+  height: auto;
+  background: rgba(99, 108, 113, 0.36);
+  border: 1px 1px 1px black;
+  opacity: 0.8;
+  box-shadow: 0 0 14px black;
+  margin: 0 auto;
+  margin-top: 1px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -86,8 +106,6 @@ ul {
   align-items: center;
   border-radius: 10px;
   font-size: 16px;
-  //padding: 10% 0;
-}
 
 .group-card-6 {
   overflow: hidden;
@@ -191,7 +209,7 @@ p#movie_night_begin {
 }
 
 .voted-button {
-text-align: center;
+  text-align: center;
 }
 
 #groups-name {
@@ -201,8 +219,13 @@ text-align: center;
 .banner-22 {
   background-size: cover;
   background-position: center;
-  padding: 0;
-}
+  padding: 150px 0;
+  position: relative;
+  .container{
+    position: relative;
+    top: 0;
+    margin-bottom: 10px;
+  }
 
 .banner-22 h1 {
   margin: 0;

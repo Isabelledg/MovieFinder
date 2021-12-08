@@ -6,7 +6,7 @@
       <%= f.error_notification %>
      <%  @movies.each do |movie| %>
       <p></p>
-
+            <img src="<%= movie.image %>" style="height: 50px;"/>
             <input class="movie_choice_input" type="checkbox" id="<%= movie.title %>" name="movies[<%= movie.id %>]">
             <label for="<%= movie.title %>"><%= movie.title %></label>
      <% end %>

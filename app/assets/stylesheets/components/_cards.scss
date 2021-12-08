@@ -80,3 +80,17 @@
     1px -1px 9px #EEEEEE,
     1px 1px 9px #EEEEEE;
 }
+
+#result:hover {
+  text-decoration: none;
+  color: white;
+  box-shadow:
+    -1px -1px 9px #EEEEEE,
+    -1px 1px 9px #EEEEEE,
+    1px -1px 9px #EEEEEE,
+    1px 1px 9px #EEEEEE;
+}
+
+.back-to-groups-button {
+  margin: 15px;
+}

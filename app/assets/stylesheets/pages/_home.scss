@@ -44,21 +44,17 @@ h2 {
   margin: 0 auto;
 }
 #front-text {
-    position: absolute;
+    //position: fixed;
     top: 100px;
-    width: 250px;
-    margin: 246px 58px 26px 58px;
-    background: rgba(170, 170, 170, 0.7);
-    padding: 15px 10px 25px;
-    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    padding: 15px 10px 24px;
 }
 
 #movie_finder {
-  font-size: 30px;
-  color: black;
-  text-shadow:
-    -3px -3px 4px white,
-    -2px -1px 4px white;
+  font-size: 36px;
+  color: white;
+  text-shadow: -3px -3px 4px #4e4e4e, -2px -1px 4px white;
 }
 
 // Button Styling

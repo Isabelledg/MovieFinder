@@ -62,9 +62,10 @@
 }
 
 .navbar-expand-sm .navbar-nav .dropdown-menu {
-  background-color: #536976;
+  background-color: #3d0000;
   border-radius: 9px;
-  box-shadow: 1px 1px 1px black;
+  //box-shadow: 1px 1px 1px black;
+  border: black;
   min-width: 140px;
   text-align: center;
 }

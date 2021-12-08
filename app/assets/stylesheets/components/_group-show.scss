@@ -88,6 +88,25 @@ ul {
   font-size: 16px;
   padding: 10% 0;
 }
+
+.group-card-4 {
+  overflow: hidden;
+  width: 80%;
+  height: auto;
+  background: #3D0000;
+  border: 1px 1px 1px black;
+  opacity: 0.8;
+  box-shadow: 0 0 14px black;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10% 0;
+}
 .img-genre {
   width: 90%;
   margin: 10px auto;

@@ -1,13 +1,12 @@
 <!-- DISPLAY GROUPS TO JOIN ONE PAGE -->
 <!-- CSS file -> components/_index.css -->
 
-
-<div class="group-card">
-<h2 id="grp">GROUPS</h2>
-<img class="img-genre"src="https://www.livingmagazine.net/wp-content/uploads/Home-A-Night-In-at-the-Movies-1p_web1.jpg" />
-    <div class="group-card-infos">
+<body class="body-background">
+<div class="group-card-4">
+<h2 id="grp">Find your group!</h2>
+  <div class="group-card-infos">
   </div>
-
+<br>
   <!--<p>Search for groups</p>-->
   <div data-controller="search-movies">
     <%= form_with url: groups_path, method: :get, html: { class:
@@ -19,22 +18,23 @@
                       data: { search_movies_target: 'input' } %>
                       <% end %>
   </div>
-
-
   <% if @groups.empty? %>
     <p class="">No groups</p>
   <% else %>
+    <img class="img-genre"src="https://www.livingmagazine.net/wp-content/uploads/Home-A-Night-In-at-the-Movies-1p_web1.jpg" />
     <% @groups.each do |group| %>
       <%#= link_to  new_group_user_group_path(group), class: "group-link" do %>
       <%= link_to group_path(group), class: "group-link" do %>
-        <div class="card-group-infos">
-          <p class="button" id="group-name"><%= group.name %></p>
         </div>
+        <br>
+        <p class="button-group-1"><%= group.name %></p>
       <% end %>
     <% end %>
   <% end %>
-
-  <div class="previous">
-    <%= link_to 'Back', pages_friends_path, class: "button", id: "back" %>
+  <br>
   </div>
+  <div class="previous">
+    <%= link_to 'Back', pages_friends_path, class: "back-button-1", id: "back" %>
 </div>
+
+</body>

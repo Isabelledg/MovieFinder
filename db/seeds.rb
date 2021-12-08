@@ -38,22 +38,22 @@ User.destroy_all
 
 movie_results.each do |movie|
   movie_created = Movie.create(title: movie["title"], description: movie["synopsis"], rating: movie["imdbrating"].to_i,length: movie["runtime"],nfid:  movie["nfid"], imdbid: movie["imdbid"], image: movie["img"])
-  
+
   if movie_created.imdbid.nil? || movie_created.image.nil?
     movie_created.delete
     puts "deleted"
   else
-    
+
 
     url_imdb="https://www.imdb.com/title/#{movie_created.imdbid}/"
     html_file = URI.open(url_imdb).read
     html_doc = Nokogiri::HTML(html_file)
-    
+
     html_doc.search('.ipc-chip__text').each do |element|
       gener_name = element.text.strip
       gener_find = Genre.where(name: gener_name).first
-      
-      
+
+
       if gener_find.nil?
         gener_created = Genre.create(name: gener_name)
         MovieGenre.create(movie: movie_created, genre: gener_created)
@@ -67,5 +67,5 @@ movie_results.each do |movie|
 
 
 end
-byebug
+
 puts "AMAZING SEEDS CREATED :D"

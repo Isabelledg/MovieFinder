@@ -14,6 +14,6 @@
   <% end %>
 </div>
 
-<div class="voted-button">
-  <a class="button" id="back_to_groups" href="/groups">Back to Groups</a>
+<div class="back-to-groups-button">
+  <%= link_to "Back to Groups", groups_path(@group), class: "button-first-vote-1", id: "back_to_groups" %>
 </div>

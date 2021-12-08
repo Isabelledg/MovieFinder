@@ -1,6 +1,7 @@
 .card-results {
   overflow: hidden;
   height: 120px;
+  width: 360px;
   background: #950101;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -17,18 +18,24 @@
 
 .card-results-infos h1 p {
   padding: 10px;
-  font-size: 30px;
+  font-size: 16px;
   font-weight: bold;
   text-shadow: 1px 1px 2px black;
+}
+
+.card-results-infos {
+  width: 120px;
 }
 
 .percentage {
   display: flex;
   padding: 10px;
-  font-size: 30px;
+  font-size: 16px;
   background:#FF0000;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 2px black;
-  border-radius: 5px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }

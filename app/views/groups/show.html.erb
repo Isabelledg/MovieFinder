@@ -5,17 +5,15 @@
   <div class="container">
     <div class="group-card-1">
       <div class="group-card-infos">
-        <p id="groups-name"><b>GROUP NAME </b></p>
+        <p id="groups-name"><b>GROUP NAME</b> <i class="fas fa-signature"></i> </p>
         <p><%= @group.name %></p>
-        <p><b>MOVIE GENRE</b> <i class="fas fa-theater-masks"></i></p>
-        <p><b>CREATED BY</b> <i class="fas fa-user-edit"></i></p>
+        <!--<p id="groups-name"> <b>MOVIE GENRE</b> <i class="fas fa-theater-masks"></i></p>-->
+        <p id="groups-name"><b>CREATED BY</b> <i class="fas fa-user-edit"></i></p>
         <p class="group-creator"><%= @group.user.name %></p>
-        <p><b>GROUP MEMBERS</b> <i class="fas fa-users"></i></p>
-        <ul>
-          <% @group.users.each do |user| %>
+        <p id="groups-name"><b>GROUP MEMBERS</b> <i class="fas fa-users"></i></p>
+        <% @group.users.each do |user| %>
             <li><%= user.name %></li>
           <% end %>
-        </ul>
       </div>
   </div>
     <% if current_user.groups.include?(@group) %>
@@ -27,10 +25,15 @@
       <% end %>
     <% end %>
     <div>
+    <% if !@non_votants.empty? %>
+    <div class="group-card-2">
+    <% else %>
+    <br>
+    <% end %>
       <% if @empty_movies %>
-        <%= link_to 'Start voting', group_movies_path(@group),  class: "button" %>
+        <%= link_to 'Start voting', group_movies_path(@group),  class: "button-first-vote" %>
       <% else %>
-      <br>
+    </div>
       <div class="group-card-1">
         <% if !@user_group.nil? %>
         <p><b>Your choices: </b></p>
@@ -43,16 +46,20 @@
       </div>
       </div>
       <% if !@non_votants.empty? %>
-        <p>Wating to the other members to vote:</p>
+      <div class="group-card-3">
+        <p><b>Still waiting for.....</b></p>
+        <li>
         <% @non_votants.each do |non_votant| %>
-          <p><%= non_votant.user.name %></p>
+          <%= non_votant.user.name %></li>
         <% end %>
       <% else %>
+      <div class="group-card-3">
       <div class="voted-button">
       <br>
         <p><b>Everyone voted! </b></p>
         <br>
-        <%= link_to 'Results', results_path(@group), class: "button-first" %>
+      </div>
+        <%= link_to 'Results', results_path(@group), class: "button-first-vote" %>
       </div>
       <% end %>
     </div>

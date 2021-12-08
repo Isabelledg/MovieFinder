@@ -40,7 +40,7 @@
     </div>
         <% if !@user_group.nil? %>
         <div class="group-card-7">
-        <p><b>Your choices: </b></p>
+        <p><b>Your choices:: </b></p>
           <% @user_group.movies.each do |movie| %>
            <li><%= movie.title %></li>
           <% end %>

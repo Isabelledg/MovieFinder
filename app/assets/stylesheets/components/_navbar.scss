@@ -10,15 +10,18 @@
 .navbar {
   height: 10vh;
   top: 0;
-  position: fixed;
+  position: sticky;
+  background-color: black;
 }
 
 #logo {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  left: 25px;
-  top: 17px;
+  left: 2vh;
+  top: 2vh;
+  height: 6%;
+  width: 6%;
 }
 
 // style for left-side logo
@@ -42,7 +45,7 @@
 
 // style for avatar
 .avatar-dropdown {
-  width: 35px;
+  width: 5vh;
   height: auto;
   position: fixed;
   top: 16px;

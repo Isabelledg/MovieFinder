@@ -10,9 +10,9 @@
         <% if @groups.empty? %>
           <!--<button type="button" class="btn btn-lg btn-primary" disabled>Join group</button>-->
         <% else %>
-          <%= link_to "Join group", groups_path, class: "button", id: "join-group" %>
+          <%= link_to "Join group", groups_path, class: "button-first-vote-1", id: "join-group" %>
         <% end %>
-        <%= link_to "Create group", new_group_path, class: "button", id: "create-group" %>
+        <%= link_to "Create group", new_group_path, class: "button-first-vote-1", id: "create-group" %>
       </div>
     </div>
   </div>

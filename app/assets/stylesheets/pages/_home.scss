@@ -44,10 +44,10 @@ h2 {
   margin: 0 auto;
 }
 #front-text {
-    position: absolute;
+    //position: fixed;
     top: 100px;
-    width: 250px;
-    margin: 246px 58px 26px 58px;
+    width: 80%;
+    margin: auto;
     background: rgba(170, 170, 170, 0.7);
     padding: 15px 10px 25px;
     border-radius: 10px;

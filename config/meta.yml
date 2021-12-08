@@ -1,0 +1,5 @@
+meta_product_name: "MovieFinder"
+meta_title: "MovieFinder - Less time choosing, more time enjoying"
+meta_description: "MovieFinder is an app that allows users to minimize the time spent on choosing movies and maximize the time enjoying the movie."
+meta_image: "front_page_mf.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

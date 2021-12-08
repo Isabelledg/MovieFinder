@@ -11,10 +11,15 @@
   margin-top: 60px;
   text-align: center;
 }
-#first_page {
+div#first_page {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("front_page_mf.png");
+  margin-top: 65px;
+  text-align: center;
   height: 100vh;
-  margin-top: 0px;
- // background-image: url("front_page_mf.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
 }
 i.fas {
   font-size: 90px;
@@ -30,9 +35,7 @@ h2 {
 }
 
 // Specific Styling
-#first_page {
-  margin-top: 60px;
-}
+
 
 #welcome {
   font-size: 14px;
@@ -43,8 +46,8 @@ h2 {
 #front-text {
   position: absolute;
   top: 100px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 200px;
+  margin: 70px auto 0px auto;
 }
 
 #movie_finder {
@@ -69,13 +72,15 @@ h2 {
   opacity: 1;
 }
 #get_started {
-  width: 170px;
+  width: auto;
   padding: 7px 20px;
   margin: 10px auto;
   margin-top: 20px;
   box-shadow:
     -7px -5px 6px #EEEEEE,
     7px 5px 6px #EEEEEE;
+  display: block;
+  margin-top: 30px;
 }
 .button:hover, .button:active {
   text-decoration: none;

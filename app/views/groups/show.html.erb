@@ -1,6 +1,10 @@
 <!-- DISPLAY LIST/INDEX/DETAILS OF USERS/GROUPS -->
 <!-- CSS file -> components/_group-show.scss -->
 
+<% content_for :meta_title, "#{@group.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @group.description %>
+<% content_for :meta_image, cl_image_path(@group.photo.path) %>
+
 <div class="banner-22" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.trynkle.com/site/wp-content/uploads/2021/01/the-cinema-industry-e1610964520156.jpg);">
   <div class="container">
     <div class="group-card-1">

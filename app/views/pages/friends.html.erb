@@ -1,18 +1,19 @@
 <!-- JOIN GROUP OR CREATE GROUP PAGE -->
 <!-- CSS file -> components/_friends.scss -->
 
-<div class="create-join-group">
-
-  <div class="first-container">
-  <h2 id="join-create">LET'S GO!</h2>
-    <img class="img-genre"src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/movie-night-ideas-1608824743.jpg?crop=1.00xw:0.752xh;0,0.209xh&resize=1200:*" />
+<body>
+  <div class="bannerfriends" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.shortlist.com/media/imager/202110/53346-posts.article_lg.jpg);">
+    <div class="containerfriends">
+      <h1>Let's go!</h1>
+      <br>
+      <div class="create-join-group">
+        <% if @groups.empty? %>
+          <!--<button type="button" class="btn btn-lg btn-primary" disabled>Join group</button>-->
+        <% else %>
+          <%= link_to "Join group", groups_path, class: "button", id: "join-group" %>
+        <% end %>
+        <%= link_to "Create group", new_group_path, class: "button", id: "create-group" %>
+      </div>
+    </div>
   </div>
-
-  <% if @groups.empty? %>
-    <button type="button" class="btn btn-lg btn-primary" disabled>Join group</button>
-  <% else %>
-    <%= link_to "Join group", groups_path, class: "button", id: "join-group" %>
-  <% end %>
-
-  <%= link_to "Create group", new_group_path, class: "button", id: "create-group" %>
-</div>
+</body>

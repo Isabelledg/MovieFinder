@@ -1,5 +1,17 @@
-<div>
+<div class="container">
   <% @results.each do |result| %>
-    <div><%= result[0].title %>:<%= (result[1] * 100).round %>%</div>
+    <div class="card-results">
+      <img src="https://toppng.com/uploads/preview/hotography-png-film-iconpng-red-movie-reel-png-video-flat-icon-11563035522oovtrmv28c.png" />
+      <div class="card-results-infos">
+        <h1><%= result[0].title %></h1>
+        <p>description</p>
+      </div>
+      <div class="percentage">
+        <%= (result[1] * 100).round %>%
+      </div>
+    </div>
   <% end %>
 </div>
+
+<%= link_to 'Back to Group', group_path(@group),  class: "button" %>
+

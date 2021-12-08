@@ -1,20 +1,23 @@
 .navbar-lewagon {
   justify-content: space-between;
   position: relative;
+  height: 60px;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-//.navbar-lewagon .navbar-brand img {
-//  width: 40px;
-//}
+.navbar {
+  height: 10vh;
+  top: 0;
+  position: fixed;
+}
 
 #logo {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  left: 55px;
+  left: 25px;
   top: 17px;
 }
 
@@ -35,8 +38,6 @@
   text-shadow:
     -2px -2px 4px white,
     -2px 2px 4px white,
-
-
 }
 
 // style for avatar
@@ -51,10 +52,10 @@
 // style for dropdown-menu
 
 .navbar-nav.mr-auto {
-  position: absolute;
+  position: fixed;
   top: 55px;
   right: 13px;
-  z-index: 1000;
+  //z-index: 1000;
 }
 
 .navbar-expand-sm .navbar-nav .dropdown-menu {

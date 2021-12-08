@@ -11,7 +11,11 @@
   margin-top: 60px;
   text-align: center;
 }
-
+#first_page {
+  height: 100vh;
+  margin-top: 0px;
+ // background-image: url("front_page_mf.png");
+}
 i.fas {
   font-size: 90px;
   color: #5E5E5E;
@@ -26,11 +30,15 @@ h2 {
 }
 
 // Specific Styling
+
 #welcome {
   font-size: 14px;
   letter-spacing: 3px;
   padding-top: 10px;
   margin: 0 auto;
+}
+front-text {
+
 }
 
 #movie_finder {

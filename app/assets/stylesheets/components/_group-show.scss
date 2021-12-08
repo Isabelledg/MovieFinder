@@ -44,7 +44,27 @@ ul {
   opacity: 0.8;
   box-shadow: 0 0 14px black;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: -180px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10% 0;
+  text-align: center;
+}
+
+.group-card-7 {
+  overflow: hidden;
+  width: 80%;
+  height: auto;
+  background: rgba(99, 108, 113, 0.36);
+  border: 1px 1px 1px black;
+  opacity: 0.8;
+  box-shadow: 0 0 14px black;
+  margin: 0 auto;
+  margin-top: 1px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -80,14 +100,13 @@ ul {
   border: 1px 1px 1px black;
   box-shadow: 0 0 14px black;
   margin: 0 auto;
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   border-radius: 10px;
   font-size: 16px;
-  padding: 10% 0;
+  padding: 0 0 10%;
 }
 
 .group-card-6 {
@@ -140,11 +159,13 @@ ul {
 .group-card-infos p {
   text-shadow: 1px 1px 4px black;
 }
-.fas.fa-theater-masks, .fas.fa-user-edit, .fas.fa-users, .fas.fa-signature {
+.fas.fa-theater-masks, .fas.fa-user-edit, .fas.fa-users, .fas.fa-signature, {
   font-size: 20px;
   color: white;
   text-shadow: none;
+  z-index: 20;
 }
+
 .group-card-infos p b {
   letter-spacing: 2px;
   margin-bottom: 5px;
@@ -195,4 +216,31 @@ p#movie_night_begin {
 
 #groups-name {
   font-size: 19px;
+}
+
+.banner-22 {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  position: relative;
+  .container{
+    position: relative;
+    top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.banner-22 h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner-22 p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }

@@ -2,11 +2,12 @@
 <!-- CSS file -> components/_sign_up.scss -->
 
 <div class="create-group">
+<div class="group-card-4">
   <div class="first-container">
-    <i class="fas fa-film"></i>
+    <i class="fas fa-users"></i>
+    <br>
     <h2 id="create-a-group">Create a Group</h2>
   </div>
-
   <div class="create-group-page">
     <%= simple_form_for @group do |f| %>
       <%= f.error_notification %>
@@ -16,6 +17,8 @@
       <%= f.input :password_confirmation, required: true %>
       <%= f.submit %>
     <% end %>
-  </div>
-  <%= link_to 'Back', pages_friends_path, class: "button", id: "back"  %>
+    </div>
+    </div>
+    <br>
+  <%= link_to 'Back', pages_friends_path, class: "back-button-1"  %>
 </div>

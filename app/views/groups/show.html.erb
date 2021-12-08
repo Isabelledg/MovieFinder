@@ -38,12 +38,11 @@
         <%= link_to 'Start voting', group_movies_path(@group),  class: "button-first-vote-1" %>
       <% else %>
     </div>
-      <div class="group-card-1">
         <% if !@user_group.nil? %>
-        <p><b>Your choices: </b></p>
-        <li>
+        <div class="group-card-7">
+        <p><b>Your choices:: </b></p>
           <% @user_group.movies.each do |movie| %>
-            <%= movie.title %></li>
+           <li><%= movie.title %></li>
           <% end %>
           <% end %>
         <% end %>
@@ -52,9 +51,9 @@
       <% if !@non_votants.empty? %>
       <div class="group-card-6">
         <p><b>Still waiting for.....</b></p>
-        <li>
+
         <% @non_votants.each do |non_votant| %>
-          <%= non_votant.user.name %></li>
+          <li><%= non_votant.user.name %></li>
         <% end %>
       <% else %>
       <div class="group-card-3">

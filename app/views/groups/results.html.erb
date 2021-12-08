@@ -1,14 +1,25 @@
 <div class="container">
   <%= image_tag "results-img.png", class: "results-img"%>
   <% @results.each do |result| %>
+  
     <div class="card-results">
-      <img src="https://toppng.com/uploads/preview/hotography-png-film-iconpng-red-movie-reel-png-video-flat-icon-11563035522oovtrmv28c.png" />
+    
+      <img src="<%= result.first.image %>" />
       <div class="card-results-infos">
         <h1><%= result[0].title %></h1>
-        <p>description</p>
+        <p><%= result.first.description %></p>
       </div>
       <div class="percentage">
         <%= (result[1] * 100).round %>%
+      </div>
+      <div>
+        <%= link_to "https://www.netflix.com/watch/#{result.first.nfid}" do %>
+          <p>Netflix</p>
+        <% end %>
+        <br>
+        <%= link_to "https://www.imdb.com/title/#{result.first.imdbid}" do %>
+          <p>Imdb</p>
+        <% end %>
       </div>
     </div>
   <% end %>

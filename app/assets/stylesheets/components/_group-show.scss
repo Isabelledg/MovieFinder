@@ -140,11 +140,17 @@ ul {
 .group-card-infos p {
   text-shadow: 1px 1px 4px black;
 }
-.fas.fa-theater-masks, .fas.fa-user-edit, .fas.fa-users, .fas.fa-signature {
+.fas.fa-theater-masks, .fas.fa-user-edit, .fas.fa-users, .fas.fa-signature, {
   font-size: 20px;
   color: white;
   text-shadow: none;
+  z-index: 20;
 }
+
+.fas.fa-users {
+font-size: 60px;
+}
+
 .group-card-infos p b {
   letter-spacing: 2px;
   margin-bottom: 5px;

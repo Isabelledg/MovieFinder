@@ -41,9 +41,8 @@
       <div class="group-card-1">
         <% if !@user_group.nil? %>
         <p><b>Your choices: </b></p>
-        <li>
           <% @user_group.movies.each do |movie| %>
-            <%= movie.title %></li>
+           <li><%= movie.title %></li>
           <% end %>
           <% end %>
         <% end %>

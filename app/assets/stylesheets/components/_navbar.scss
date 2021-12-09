@@ -15,16 +15,6 @@
   z-index: 1000;
 }
 
-#logo {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  left: 2vh;
-  top: 2vh;
-  height: 6%;
-  width: 6%;
-}
-
 // style for left-side logo
 #logo .fas.logo {
   font-size: 30px;
@@ -46,11 +36,11 @@
 
 // style for avatar
 .avatar-dropdown {
-  width: 5vh;
-  height: auto;
-  position: fixed;
-  top: 16px;
-  right: 13px;
+    width: 7vh;
+    height: auto;
+    position: fixed;
+    top: 15px;
+    right: 13px;
 }
 
 // style for dropdown-menu

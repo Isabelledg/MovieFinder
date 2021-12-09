@@ -1,13 +1,8 @@
 <!-- CREATE GROUP PAGE -->
 <!-- CSS file -> components/_sign_up.scss -->
+<div class="container text-center">
+  <i class="fas fa-users fa-8x"></i>
 
-<div class="create-group">
-<div class="group-card-4">
-  <div class="first-container">
-    <i class="fas fa-users"></i>
-    <br>
-    <h2 id="create-a-group">Create a Group</h2>
-  </div>
   <div class="create-group-page">
     <%= simple_form_for @group do |f| %>
       <%= f.error_notification %>
@@ -15,10 +10,9 @@
       <%= f.input :genre_id, collection: @genres %>
       <%= f.input :password, required: true %>
       <%= f.input :password_confirmation, required: true %>
-      <%= f.submit %>
+      <%= f.submit "Create a group", class: "button-1"  %>
     <% end %>
-    </div>
-    </div>
     <br>
-  <%= link_to 'Back', pages_friends_path, class: "back-button-1"  %>
+  <%= link_to 'Back', pages_friends_path %>
+</div>
 </div>

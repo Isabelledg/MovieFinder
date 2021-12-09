@@ -1,96 +1,48 @@
-.card-results {
+.card-product {
   overflow: hidden;
   height: 120px;
-  width: 100%;
-  background: #950101;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #3e3e3e;
   display: flex;
-  color: white;
-  justify-content: space-between;
-  opacity: 0.8;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
-.card-results img {
+.card-product img {
   height: 100%;
   width: 120px;
   object-fit: cover;
-  border-radius: 5px;
 }
 
-.card-results-infos, h1 {
-  padding: 5px;
-  font-size: 20px;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px black;
-  text-align: center;
-}
-
-.card-results-infos, p {
-  font-size: 18px;
-  font-weight: lighter;
-  text-align: center;
-}
-
-.card-results-infos {
-  width: 120px;
-  flex-grow: 2;
-}
-
-.card-results {
-  width: 100%;
-  border-radius: 5px;
-  margin: 5px;
-}
-
-.percentage {
-  display: flex;
-  padding: 10px;
+.card-product h2 {
   font-size: 16px;
-  background:#FF0000;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 1px 1px 2px black;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.results-img {
-  object-fit: contain;
-  height: 240px;
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+
 }
 
-#back_to_groups {
-  display: block;
-  width: 150px;
-  padding: 3px 5px;
-  box-shadow:
-    -1px -1px 5px #EEEEEE
-    -1px 1px 5px #EEEEEE,
-    1px -1px 5px #EEEEEE,
-    1px 1px 5px #EEEEEE;
+.card-product .card-product-infos {
+  padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
-#back_to_groups:hover {
-  text-decoration: none;
-  color: white;
-  box-shadow:
-    -1px -1px 9px #EEEEEE,
-    -1px 1px 9px #EEEEEE,
-    1px -1px 9px #EEEEEE,
-    1px 1px 9px #EEEEEE;
+.card-product-extra {
+margin-right: 10px;
+text-align: center;
 }
 
-#result:hover {
-  text-decoration: none;
-  color: white;
-  box-shadow:
-    -1px -1px 9px #EEEEEE,
-    -1px 1px 9px #EEEEEE,
-    1px -1px 9px #EEEEEE,
-    1px 1px 9px #EEEEEE;
-}
-
-.back-to-groups-button {
-  margin: 15px;
+.card-product-extra-percentage {
+  background: linear-gradient(180deg, #ED213A 0%, #93291E 100%);
+  color: #ffffff;
+  margin-top: 45px;
+  border-radius: 0.5rem;
 }

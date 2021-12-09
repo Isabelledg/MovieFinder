@@ -1,83 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
-div.login {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.first-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin: 80px auto;
-}
-i.fas {
-  font-size: 90px;
-  color: #5E5E5E;
-  text-shadow: -2px 3px px #EEEEEE;
-}
-#login {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  margin: 0 auto;
-  font-size: 20px;
-  letter-spacing: 3px;
-  line-height: 0.9cm;
-}
 
 // form is styled in _sign_up.scss
-label.optional.password, label.optional.password {
-  margin: 0;
-  padding: 3px 0;
-}
-div.form-check {
-  padding: 5px 0 0 20px;
-}
+
 
 // dropdown menu does not display in login_view
-.navbar-toggler {
-
-}
-
-a#sign_up_btn.button {
-  font-size: 16px;
-  text-align: center;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  text-shadow: 2px 2px 1px black;
-  border-radius: 7px;
-  background: #3D0000;
-  opacity: 1;
-  display: block;
-  padding: 3px 5px;
-  height: 32px;
-  margin-top: 23px;
-}
-input#login_btn.button:hover {
-  font-size: 16px;
-  text-align: center;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  text-shadow: 2px 2px 1px black;
-  border-radius: 7px;
-  background: #3D0000;
-  opacity: 1;
-  display: block;
-  padding: 3px 5px;
-  height: 32px;
-  margin-top: 23px;
-}
 // Style for groups/new.html.erb
-div.create-group {
-  width: 100%;
-  margin: 0 auto;
-}
-div.create-group-page {
-  width: 80%;
-  margin: 0 auto;
-}

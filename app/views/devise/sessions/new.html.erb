@@ -1,12 +1,10 @@
 <!-- LOGIN PAGE -->
 <!-- CSS file -> components/_login.scss -->
 
-<div class="login" >
-
-  <div class="first-container">
+<div class="container">
     <!-- <i class="fas fa-film"></i> -->
-    <h2 id="login">LOGIN</h2>
-  </div>
+    <h2>LOGIN</h2>
+
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
@@ -25,8 +23,8 @@
   <!-- <%= render "devise/shared/links" %> -->
 
     <div class="form-actions">
-      <%= link_to "Sign up", new_user_registration_path, class: "button", id: "sign_up_btn" %>
-      <%= f.button :submit, "Login", class: "button", id: "login_btn" %>
+      <%= f.button :submit, "Login", class: "button-1" %>
     </div>
   <% end %>
+  <%= link_to "Sign up", new_user_registration_path %>
 </end>

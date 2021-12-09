@@ -4,74 +4,62 @@
 <% content_for :meta_title, "#{@group.name} is on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @group.name %>
 <%# content_for :meta_image, cl_image_path(@group.photo.path) %>
-
-<div class="banner-22" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.trynkle.com/site/wp-content/uploads/2021/01/the-cinema-industry-e1610964520156.jpg);">
-  <div class="container" style="margin-top: 0; margin-bottom: 0;">
-    <div class="group-card-1">
-      <div class="group-card-infos">
-        <p id="groups-name"><b>GROUP NAME</b> <i class="fas fa-signature"></i> </p>
-        <p><%= @group.name %></p>
-        <!--<p id="groups-name"> <b>MOVIE GENRE</b> <i class="fas fa-theater-masks"></i></p>-->
-        <p id="groups-name"><b>CREATED BY</b> <i class="fas fa-user-edit"></i></p>
-        <p class="group-creator"><%= @group.user.name %></p>
-        <p id="groups-name"><b>GROUP MEMBERS</b> <i class="fas fa-users"></i></p>
-        <% @group.users.each do |user| %>
-            <li><%= user.name %></li>
-        <% end %>
-      </div>
-     </div>
-      <% if current_user.groups.include?(@group) %>
-      <% else %>
-        <%= simple_form_for [@group, UserGroup.new] do |f| %>
-          <%= f.error_notification %>
-          <%= f.input :password, required: true %>
-          <%= f.submit 'Join' %>
-        <% end %>
-      <% end %>
-      <div>
-      <% if !@non_votants.empty? %>
-        <div class="group-card-2">
-      <% else %>
-      <br>
-      <% end %>
-      <% if @empty_movies %>
-        <%= link_to 'Start voting', group_movies_path(@group),  class: "button-first-vote-1" %>
-      <% else %>
-        </div>
-        <% if !@user_group.nil? %>
-        <div class="group-card-7">
-        <p><b>Your choices:: </b></p>
-          <% @user_group.movies.each do |movie| %>
-           <li><%= movie.title %></li>
-          <% end %>
-        <% end %>
-      <% end %>
+<div class="container text-center">
+    <div class="black-card">
+      <h2><%= @group.name %></h2>
+      <p><%= @group.genre.name %></p>
+      <p>Created by <%= @group.user.name %></p>
     </div>
+
+ <div class="black-card">
+    <i class="fas fa-users fa-2x" style="margin-bottom: 10px;"></i>
+    <% @group.users.each do |user| %>
+        <p><%= user.name %></p>
+    <% end %>
   </div>
-    <% if !@non_votants.empty? %>
-      <div class="group-card-6">
-      <p><b>Still waiting for.....</b></p>
 
-      <% @non_votants.each do |non_votant| %>
-        <li><%= non_votant.user.name %></li>
-        <% end %>
-      <% else %>
-      <div class="group-card-3">
+  <% if current_user.groups.include?(@group) %>
+  <% else %>
+  <div class="black-card container">
+    <%= simple_form_for [@group, UserGroup.new] do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :password, required: true %>
+      <%= f.submit 'Join',  class: "button-1" %>
+    <% end %>
+   </div>
+  <% end %>
 
-      <div class="voted-button">
-      <br>
-        <p><b>Everyone voted!</b></p>
-      <br>
-      </div>
-        <%= link_to "Results", results_path(@group), class: "button-first-vote-1", id: "results" %>
 
-      </div>
+
+  <% if !@non_votants.empty? %>
+    <div class="black-card" style="margin-top: 30px;">
+    <p>Waiting</p>
+    <% @non_votants.each do |non_votant| %>
+      <p><%= non_votant.user.name %></p>
       <% end %>
     </div>
+  <% end %>
+  <% if @empty_movies %>
+
+    <%= link_to 'Start voting', group_movies_path(@group),  class: "button-1" %>
+
+  <% else %>
+    <% if !@user_group.nil? %>
+    <div class="black-card">
+    <p>Your choices:</p>
+      <% @user_group.movies.each do |movie| %>
+        <p><%= movie.title %></p>
+      <% end %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% if @non_votants.empty? %>
+  <%= link_to "Results", results_path(@group), class: "button-1", id: "results" %>
+
+  <% end %>
+
 </div>
-
-
-
 
 
 

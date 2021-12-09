@@ -2,18 +2,18 @@
 <!-- CSS file -> components/_friends.scss -->
 
 <body>
-  <div class="bannerfriends" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://espalhafactos.com/wp-content/uploads/2020/03/Cinema-iStock.jpg);">
-    <div class="containerfriends">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://espalhafactos.com/wp-content/uploads/2020/03/Cinema-iStock.jpg);">
+    <div class="containerfriends text-center container" >
       <h1>Let's go!</h1>
       <br>
-      <div class="create-join-group">
+
         <% if @groups.empty? %>
           <!--<button type="button" class="btn btn-lg btn-primary" disabled>Join group</button>-->
         <% else %>
-          <%= link_to "Join group", groups_path, class: "button-first-vote-1", id: "join-group" %>
+          <%= link_to "Join group", groups_path, class: "button-1"%>
         <% end %>
-        <%= link_to "Create group", new_group_path, class: "button-first-vote-1", id: "create-group" %>
-      </div>
+        <%= link_to "Create group", new_group_path, class: "button-1", style: "margin-top: 15px;" %>
+
     </div>
   </div>
 </body>

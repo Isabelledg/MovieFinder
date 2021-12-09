@@ -1,17 +1,17 @@
 <div class= "group-info-container">
-<div class="group-card-4">
-  <h1>Movies</h1>
-  <p>Pick your favourites below!</p>
-  <%= simple_form_for [@group, @user_group, UserMovie.new] do |f| %>
-      <%= f.error_notification %>
-     <%  @movies.each do |movie| %>
-      <p></p>
-            <img src="<%= movie.image %>" style="height: 50px;"/>
-            <input class="movie_choice_input" type="checkbox" id="<%= movie.title %>" name="movies[<%= movie.id %>]">
-            <label for="<%= movie.title %>"><%= movie.title %></label>
-     <% end %>
-      <%#= f.association :movie, include_blank: false,label: false %>
-      <%= f.submit "Submit my vote", class: "button-1" %>
-      </div>
+  <div class="group-card-4" style="margin-left: 20px; margin-bottom: 20px;">
+    <h1>Movies</h1>
+    <p>Pick your favourites below!</p>
+    <%= simple_form_for [@group, @user_group, UserMovie.new] do |f| %>
+        <%= f.error_notification %>
+      <%  @movies.each do |movie| %>
+        <p></p>
+              <img src="<%= movie.image %>" style="height: 50px; border-radius: 6px; border: solid 2px grey; margin-right: 5px;"/>
+              <input class="movie_choice_input" type="checkbox" id="<%= movie.title %>" name="movies[<%= movie.id %>]">
+              <label for="<%= movie.title %>"><%= movie.title %></label>
+      <% end %>
+        <%#= f.association :movie, include_blank: false,label: false %>
+        <%= f.submit "Submit my vote", class: "button-1", style: "margin-top: 20px;" %>
+    <% end %>
+  </div>
 </div>
-  <% end %>

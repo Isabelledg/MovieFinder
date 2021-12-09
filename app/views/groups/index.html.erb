@@ -6,7 +6,7 @@
   <div class="container">
 
   <div class="banner-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.livingmagazine.net/wp-content/uploads/Home-A-Night-In-at-the-Movies-1p_web1.jpg)">
-    Join a group!
+    Join your group!
   </div>
   <% if @groups.empty? %>
     <p class="">No groups</p>
@@ -15,10 +15,10 @@
       <%= link_to group_path(group), class: "group-link" do %>
         <br>
         <div class="button-1">
-        <%= group.name %>   <i class="fas fa-users"></i> <span><%= group.genre.name %>
+        <%= group.name %>
+        <br>
+        <i class="fas fa-users"></i> <span><%= group.genre.name %>
         </span>
-
-
 
         </div>
       <% end %>

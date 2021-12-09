@@ -7,7 +7,7 @@
 <div class="container text-center">
 <br>
     <div class="black-card">
-      <h2><%= @group.name %></h2>
+      <h2 style="font-size: 26px;"><%= @group.name %></h2>
       <p><%= @group.genre.name %></p>
       <p>Created by: <%= @group.user.name %></p>
     </div>
@@ -34,7 +34,7 @@
 
   <% if !@non_votants.empty? %>
     <div class="black-card" style="margin-top: 30px;">
-    <p>Waiting</p>
+    <p>Waiting for...</p>
     <% @non_votants.each do |non_votant| %>
       <p><%= non_votant.user.name %></p>
       <% end %>
@@ -47,7 +47,7 @@
   <% else %>
     <% if !@user_group.nil? %>
     <div class="black-card">
-    <h2>Your choices:</h2>
+    <h2>You voted for...</h2>
       <% @user_group.movies.each do |movie| %>
         <p><%= movie.title %></p>
       <% end %>
@@ -55,7 +55,7 @@
     <% end %>
   <% end %>
 
-
+  <br>
   <% if @non_votants.empty? && current_user.groups.include?(Group.find(params[:id]))%>
   <%= link_to "Results", results_path(@group), class: "button-1", id: "results" %>
   <% else %>

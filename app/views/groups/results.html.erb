@@ -1,7 +1,8 @@
 
 
 <div class="container">
-  <h1>Matching results </h1>
+  <h1>Matching results: </h1>
+  <br>
   <% @results.each do |result| %>
   <!-- start the card-->
   <div class="card-product">
@@ -23,10 +24,10 @@
 
       <div class="card-product-extra-percentage"><p><%= (result[1] * 100).round %>%</p></div>
     </div>
-  </div>
   <!-- finish the card-->
+  </div>
   <% end %>
   <div class="back-to-groups-button" style="margin-top: 60px;">
-    <%= link_to "Back to Groups", groups_path(@group), class: "button-1", id: "back_to_groups" %>
+    <%= link_to "Back to Groups", groups_path(@group), class: "back-button-1" %>
   </div>
 </div>

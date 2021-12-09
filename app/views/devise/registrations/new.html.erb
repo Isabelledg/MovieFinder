@@ -27,10 +27,11 @@
   </div>
 
     <div class="form-actions">
-      <%= link_to "Log in", new_user_session_path, class: "button", id: "login_btn" %>
-      <%= f.button :submit, "Sign up", class: "button", id: "sign_up_btn" %>
+      <%= f.button :submit, "Sign up", class: "button-1", id: "sign_up_btn" %>
     </div>
   <% end %>
+    <%= link_to "Log in", new_user_session_path, style: "color: white;", id: "login_btn" %>
+
 </div>
 
   <!-- <%= render "devise/shared/links" %> -->

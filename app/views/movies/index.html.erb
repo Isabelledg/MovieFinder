@@ -1,7 +1,7 @@
 <div class= "group-info-container">
   <div class="group-card-4" style="margin-left: 20px; margin-bottom: 20px;">
     <h1>Movies</h1>
-    <p>Pick your favourites below!</p>
+    <p style="margin-bottom: 20px;">Pick your favourites below!</p>
     <%= simple_form_for [@group, @user_group, UserMovie.new] do |f| %>
         <%= f.error_notification %>
       <%  @movies.each do |movie| %>

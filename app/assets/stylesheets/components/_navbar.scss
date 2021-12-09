@@ -15,22 +15,6 @@
   z-index: 1000;
 }
 
-#logo {
-position: center;
-width: 134px;
-height: 38px;
-top: 23px;
-font-family: Bebas Neue;
-font-style: normal;
-font-weight: normal;
-font-size: 32px;
-line-height: 38px;
-}
-
-#logo img {
-width: 76%;
-}
-
 // style for left-side logo
 #logo .fas.logo {
   font-size: 30px;
@@ -52,11 +36,11 @@ width: 76%;
 
 // style for avatar
 .avatar-dropdown {
-  width: 5vh;
-  height: auto;
-  position: fixed;
-  top: 16px;
-  right: 13px;
+    width: 7vh;
+    height: auto;
+    position: fixed;
+    top: 15px;
+    right: 13px;
 }
 
 // style for dropdown-menu

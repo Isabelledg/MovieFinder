@@ -12,3 +12,28 @@
 @import 'btn';
 
 // HTML file -> views/groups/new.html.erb
+
+// Style for views/movies/index.html.erb
+
+.movie_choice_input {
+  position: absolute;
+  transform: scale(0);
+}
+.movie_choice_input + label {
+  cursor: pointer;
+  //button look
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+
+  background-color: rgba(193, 37, 44, 0.6);
+  color: #ffffff;
+
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.movie_choice_input:checked + label {
+  background-color: #C1252C;
+}

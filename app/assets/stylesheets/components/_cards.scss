@@ -5,34 +5,36 @@
   display: flex;
   align-items: center;
   margin-bottom: 8px;
+  border-radius: 5px;
 }
 
 .card-product img {
   height: 100%;
   width: 120px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin-top: 30px;
 }
 
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 
 }
 
-.card-product .card-product-infos {
-  padding: 2px 16px;
+.card-product-infos {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   flex-grow: 1;
+  align-content: center;
+  height: 120px;
 }
 
 .card-product-extra {
@@ -43,6 +45,6 @@ text-align: center;
 .card-product-extra-percentage {
   background: linear-gradient(180deg, #ED213A 0%, #93291E 100%);
   color: #ffffff;
-  margin-top: 45px;
+  margin-top: 15px;
   border-radius: 0.5rem;
 }

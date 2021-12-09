@@ -10,25 +10,23 @@
     <div style="margin-bottom: 30px;">
       <h2><%= result[0].title %></h2>
       <%= link_to "https://www.imdb.com/title/#{result.first.imdbid}" do %>
-            <p>Imdb</p>
+        <%= image_tag "imdb-logo.png", style: "height: auto; width: 50px;" %>
       <% end %>
     </div>
-    <div>
-    <p><%= (result[0].length / 60).to_i %>m</p>
-    </div>
-    </div>
+      <p><%= (result[0].length / 60).to_i %>m</p>
+  </div>
+
     <div class="card-product-extra">
-    <%= link_to "https://www.netflix.com/watch/#{result.first.nfid}" do %>
-        <%= image_tag "netflix-logo.png", style: "height: auto; width: 50px;" %>
-    <% end %>
+      <%= link_to "https://www.netflix.com/watch/#{result.first.nfid}" do %>
+        <%= image_tag "netflix-logo.png", style: "height: auto; width: 90px; margin-top: 28px" %>
+      <% end %>
 
-
-    <div class="card-product-extra-percentage"><p><%= (result[1] * 100).round %>%</p></div>
+      <div class="card-product-extra-percentage"><p><%= (result[1] * 100).round %>%</p></div>
     </div>
   </div>
   <!-- finish the card-->
   <% end %>
   <div class="back-to-groups-button" style="margin-top: 60px;">
-  <%= link_to "Back to Groups", groups_path(@group), class: "button-1", id: "back_to_groups" %>
+    <%= link_to "Back to Groups", groups_path(@group), class: "button-1", id: "back_to_groups" %>
   </div>
 </div>

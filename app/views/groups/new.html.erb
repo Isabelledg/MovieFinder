@@ -10,9 +10,12 @@
       <%= f.input :genre_id, collection: @genres %>
       <%= f.input :password, required: true %>
       <%= f.input :password_confirmation, required: true %>
+      <br>
       <%= f.submit "Create a group", class: "button-1"  %>
     <% end %>
     <br>
-  <%= link_to 'Back', pages_friends_path %>
+    <br>
+    <br>
 </div>
 </div>
+  <%= link_to 'Back', pages_friends_path, class: "back-button-1" %>

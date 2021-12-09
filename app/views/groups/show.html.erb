@@ -5,6 +5,7 @@
 <% content_for :meta_description, @group.name %>
 <%# content_for :meta_image, cl_image_path(@group.photo.path) %>
 <div class="container text-center">
+<br>
     <div class="black-card">
       <h2><%= @group.name %></h2>
       <p><%= @group.genre.name %></p>
@@ -40,7 +41,7 @@
     </div>
   <% end %>
   <% if @empty_movies %>
-
+    <br>
     <%= link_to 'Start voting', group_movies_path(@group),  class: "button-1" %>
 
   <% else %>
@@ -55,8 +56,8 @@
   <% end %>
 
   <% if @non_votants.empty? %>
+  <br>
   <%= link_to "Results", results_path(@group), class: "button-1", id: "results" %>
-
   <% end %>
 
 </div>

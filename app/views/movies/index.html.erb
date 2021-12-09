@@ -2,6 +2,7 @@
 <div class="group-card-4">
   <h1>Movies</h1>
   <p>Pick your favourites below!</p>
+  <br>
   <%= simple_form_for [@group, @user_group, UserMovie.new] do |f| %>
       <%= f.error_notification %>
      <%  @movies.each do |movie| %>
@@ -11,6 +12,9 @@
             <label for="<%= movie.title %>"><%= movie.title %></label>
      <% end %>
       <%#= f.association :movie, include_blank: false,label: false %>
+      <br>
+      <br>
+      <br>
       <%= f.submit "Submit my vote", class: "button-1" %>
       </div>
 </div>

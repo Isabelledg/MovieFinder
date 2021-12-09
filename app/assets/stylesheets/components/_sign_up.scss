@@ -56,25 +56,39 @@ h2#sign_up {
 #sign_up_btn, #login_btn, [type="submit"]:not(:disabled) {
   display: block;
   width: 100px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px black;
+  border-radius: 7px;
+  background: #3D0000;
+  opacity: 1;
+  display: block;
   padding: 3px 5px;
-  box-shadow:
-    -1px -1px 5px #EEEEEE
-    -1px 1px 5px #EEEEEE,
-    1px -1px 5px #EEEEEE,
-    1px 1px 5px #EEEEEE;
+  height: 32px;
+  margin-top: 23px;
+  border: solid 2px white;
 }
 
 #sign_up_btn:hover, #login_btn:hover, #sign_up_btn:active, #login_btn:active, [type="submit"]:not(:disabled):hover, [type="submit"]:not(:disabled):active {
   text-decoration: none;
   color: white;
-  box-shadow:
-    -1px -1px 9px #EEEEEE,
-    -1px 1px 9px #EEEEEE,
-    1px -1px 9px #EEEEEE,
-    1px 1px 9px #EEEEEE;
 }
 
 a#login_btn.button {
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px black;
+  border-radius: 7px;
+  background: #3D0000;
+  opacity: 1;
+  display: block;
+  padding: 3px 5px;
   height: 32px;
   margin-top: 23px;
 }

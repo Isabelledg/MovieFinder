@@ -1,9 +1,10 @@
 <!-- LOGIN PAGE -->
 <!-- CSS file -> components/_login.scss -->
 
-<div class="container">
+ <div class="container text-center">
     <!-- <i class="fas fa-film"></i> -->
     <h2>LOGIN</h2>
+    <br>
 
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -17,8 +18,7 @@
                   input_html: { autocomplete: "current-password" }, class: "password" %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
-
-
+    <br>
 
   <!-- <%= render "devise/shared/links" %> -->
 
@@ -26,4 +26,6 @@
       <%= f.button :submit, "Login", class: "button-1" %>
     </div>
   <% end %>
-  <%= link_to "Sign up", new_user_registration_path, style: "color: white; margin-left: 5px;" %>
+
+  <br>
+  <%= link_to "Sign up", new_user_registration_path, style: "color: white;" %>

@@ -11,7 +11,7 @@ class GroupsController < ApplicationController
     @empty_movies = @user_group.movies.empty?
     end
 
-    
+
     @group.user_groups.where(voted: false).empty? ? @non_votants = [] : @non_votants = @group.user_groups.where(voted: false)
 
   end
@@ -44,6 +44,7 @@ class GroupsController < ApplicationController
   def results
     @group = Group.find(params[:id])
     @results = movie_counter(@group)
+    @results = @results.sort {|a,b| b[1] <=> a[1]}
   end
 
   private
